@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home — Muhammad Ahsan Ali</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "tertiary": "#ddb7ff",
+                        "inverse-surface": "#dce1fb",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "surface-container-highest": "#2e3447",
+                        "tertiary-container": "#b76dff",
+                        "outline-variant": "#424754",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "background": "#0c1324",
+                        "on-secondary-container": "#00424e",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#2a3043",
+                        "on-primary": "#002e6a",
+                        "surface-container-high": "#23293c",
+                        "outline": "#8c909f",
+                        "on-primary-container": "#00285d",
+                        "primary-fixed-dim": "#adc6ff",
+                        "secondary-fixed": "#acedff",
+                        "secondary-container": "#03b5d3",
+                        "surface-tint": "#adc6ff",
+                        "inverse-primary": "#005ac2",
+                        "surface-container-lowest": "#070d1f",
+                        "on-surface-variant": "#c2c6d6",
+                        "on-tertiary-container": "#400071",
+                        "tertiary-fixed": "#f0dbff",
+                        "on-tertiary-fixed-variant": "#6900b3",
+                        "on-tertiary-fixed": "#2c0051",
+                        "surface-variant": "#2e3447",
+                        "on-secondary-fixed": "#001f26",
+                        "primary-container": "#4d8eff",
+                        "surface-bright": "#33394c",
+                        "on-primary-fixed-variant": "#004395",
+                        "primary": "#adc6ff",
+                        "surface-container-low": "#151b2d",
+                        "on-surface": "#dce1fb",
+                        "on-error": "#690005",
+                        "surface": "#0c1324",
+                        "secondary": "#4cd7f6",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container": "#191f31",
+                        "on-tertiary": "#490080",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#dce1fb",
+                        "on-primary-fixed": "#001a42",
+                        "surface-dim": "#0c1324",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#003640"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                },
+                "spacing": {
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "section-gap": "120px"
+                },
+                "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "code-sm": ["geist"],
+                        "label-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "headline-lg": ["Geist"]
+                },
+                "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "code-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600"}]
+                }
+              },
+            },
+          }
+        </script>
+<style>
+        body {
+            background-color: #070d1f;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(25, 31, 49, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(173, 198, 255, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(76, 215, 246, 0.2);
+            border-color: rgba(76, 215, 246, 0.4);
+        }
+        .architecture-grid {
+            background-image: 
+                linear-gradient(to right, rgba(173, 198, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(173, 198, 255, 0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+        .mouse-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(76, 215, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+        }
+        @keyframes stream-move {
+            0% { transform: translateY(-200px); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        .data-stream {
+            position: absolute;
+            width: 1px;
+            height: 200px;
+            background: linear-gradient(to bottom, transparent, #4cd7f6, transparent);
+            filter: drop-shadow(0 0 8px #4cd7f6);
+            pointer-events: none;
+        }
+        .breath-glow {
+            animation: breathe 4s ease-in-out infinite;
+        }
+        @keyframes breathe {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(76, 215, 246, 0.2)); text-shadow: 0 0 0px transparent; }
+            50% { filter: drop-shadow(0 0 15px rgba(76, 215, 246, 0.4)); text-shadow: 0 0 10px rgba(76, 215, 246, 0.3); }
+        }
+        .pulse-primary {
+            animation: pulse-glow 3s infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(77, 142, 255, 0.4); }
+            50% { box-shadow: 0 0 25px 8px rgba(77, 142, 255, 0.2); }
+        }
+        .badge-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .badge-hover:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(76, 215, 246, 0.3);
+            border-color: rgba(76, 215, 246, 0.6);
+        }
+        .floating-orb {
+            position: absolute;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.15;
+            border-radius: 50%;
+            transition: transform 0.2s ease-out;
+        }
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.21, 1.02, 0.73, 1), transform 0.8s cubic-bezier(0.21, 1.02, 0.73, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(25, 31, 49, 0.4);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4cd7f6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased bg-surface-dim">
+<div class="mouse-glow" id="cursor-glow"></div>
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md border-b border-white/10 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Muhammad Ahsan Ali Logo" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsgMa6Q3AUrimJawFsuMPq8B7NVru_1KBFEWJppr3PeHHrdRhLSTXaTGfy7W69LjlrPx7NA0NrjBZLmmjXVqDZcTEeeghy3x6O64hRGRb2HutP8l_5lOYAmT0frmtSrpn3Iu89Ou3KwZPETnTD42-VZjAQnmV-8SEDvfVSaprjSX69OuCfmDaIbY-aaT54wtTEvKOz41b0e4c4gMUPZl6UsIKCa7r0gBCTsVLDpUIBapYfkwIq8comiCw8w"/>
+<div class="font-headline-md text-lg md:text-xl font-bold text-on-surface tracking-tighter whitespace-nowrap">Muhammad Ahsan Ali</div>
+</div>
+<nav class="hidden lg:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Research</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Mentorship</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md text-label-md font-bold hover:scale-95 transition-all duration-300">
+            Book Consultation
+        </button>
+</div>
+</header>
+<main class="relative min-h-screen">
+<!-- Atmospheric Background Elements -->
+<div class="fixed inset-0 architecture-grid opacity-20 pointer-events-none"></div>
+<div class="fixed inset-0 pointer-events-none overflow-hidden" id="stream-container"></div>
+<div class="floating-orb w-[600px] h-[600px] bg-primary top-[-10%] right-[-10%]" id="orb-1"></div>
+<div class="floating-orb w-[500px] h-[500px] bg-secondary bottom-[-10%] left-[-10%]" id="orb-2"></div>
+<!-- Section 1: Hero -->
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-48 pb-32 min-h-screen flex items-center">
+<div class="max-w-4xl">
+<div class="flex flex-wrap gap-3 mb-8 reveal-up">
+<span class="badge-hover px-3 py-1 rounded-full border border-secondary/30 bg-secondary/10 text-secondary font-label-md text-xs uppercase tracking-widest flex items-center gap-2 cursor-default">
+<span class="material-symbols-outlined text-[14px]">military_tech</span>
+                    11+ Years Experience
+                </span>
+<span class="badge-hover px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-md text-xs uppercase tracking-widest cursor-default">Enterprise Systems</span>
+<span class="badge-hover px-3 py-1 rounded-full border border-tertiary/30 bg-tertiary/10 text-tertiary font-label-md text-xs uppercase tracking-widest cursor-default">Engineering Leadership</span>
+<span class="badge-hover px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-md text-xs uppercase tracking-widest cursor-default">MSc Researcher</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight tracking-tighter reveal-up">
+                Building <span class="text-secondary breath-glow">Software Businesses</span>, Engineering Teams, and Technology Infrastructure That Scale.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl reveal-up">
+                Fractional CTO, Technical Founder Partner, and SaaS Architect delivering clarity in complexity. Transforming ambitious business operations into resilient, high-performance digital platforms.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 reveal-up">
+<button class="px-8 py-4 bg-primary text-on-primary font-label-md text-lg font-bold rounded-xl glow-hover pulse-primary transition-all duration-300 flex items-center justify-center gap-2">
+                    Book CTO Consultation
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 glass-card text-primary font-label-md text-lg font-bold rounded-xl glow-hover transition-all duration-300">
+                    Explore Case Studies
+                </button>
+</div>
+</div>
+</section>
+<!-- Section 2: Strategic Authority (About Integration) -->
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="reveal-up">
+<h2 class="font-label-md text-secondary uppercase tracking-[0.3em] mb-4">The Strategic Partner</h2>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8">Strategic Authority for Modern Enterprises</h3>
+<p class="font-body-lg text-on-surface-variant mb-8">
+                    Bridging the gap between ambitious business vision and bulletproof technical execution. My approach combines decadal industry experience with academic rigor in AI and Distributed Systems.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-bold">Engineering Leadership</span>
+</div>
+<p class="text-sm text-on-surface-variant">Building high-performance cultures and mentorship frameworks.</p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined">architecture</span>
+<span class="font-bold">Enterprise Delivery</span>
+</div>
+<p class="text-sm text-on-surface-variant">Architecting systems that handle millions of requests reliably.</p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined">cycle</span>
+<span class="font-bold">Lifecycle Ownership</span>
+</div>
+<p class="text-sm text-on-surface-variant">End-to-end technical strategy from MVP to Global Scale.</p>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary-fixed-dim">
+<span class="material-symbols-outlined">school</span>
+<span class="font-bold">Academic Credibility</span>
+</div>
+<p class="text-sm text-on-surface-variant">MSc Research in AI and Scalable Architectures.</p>
+</div>
+</div>
+</div>
+<div class="relative reveal-up">
+<div class="aspect-square glass-card rounded-3xl overflow-hidden relative group">
+<img alt="Technical Infrastructure Visualization" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCwm5yO4_JiVVwQNLrNKNcb1f-mEvJTapmfPu0K4U3EguefgoK4lt21JbIr9gS-dFfd7KEg6uiKb8FEyl8M-Zyz791NcOXiZWLVNt7sWbGXQcy3yoIridpmI30EvdeI0O_Xjv9GovyOM_zqxq3g-dKrAFKchdA0l75KFat886KzedAwCr5JyDWI2zXtm05aBf6Aq_0m_ZuQbXxduottg2Sj5I9v9vHTsQOaIxvyb8SgYgFs8ZmyTaCEHJa9fiTBb7K6b1XYqcTkf1P"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="p-4 glass-card rounded-xl">
+<div class="text-xs text-secondary-fixed uppercase tracking-widest mb-1">ARCHITECTURAL FOCUS</div>
+<div class="text-on-surface font-bold">Scalable Multi-tenant SaaS Foundations &amp; AI-Driven Operational Excellence</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Impact in Numbers -->
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter reveal-up">
+<div class="glass-card p-8 rounded-2xl text-center group hover:border-secondary/40 transition-all">
+<div class="text-secondary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">11+</div>
+<div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">Years Professional Exp</div>
+</div>
+<div class="glass-card p-8 rounded-2xl text-center group hover:border-primary/40 transition-all">
+<div class="text-primary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">50+</div>
+<div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">Global Projects Delivered</div>
+</div>
+<div class="glass-card p-8 rounded-2xl text-center group hover:border-tertiary/40 transition-all">
+<div class="text-tertiary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">$100M</div>
+<div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">Value Architected</div>
+</div>
+<div class="glass-card p-8 rounded-2xl text-center group hover:border-secondary/40 transition-all">
+<div class="text-secondary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">99.9%</div>
+<div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">System Uptime Record</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Strategic Offerings -->
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal-up">
+<div class="max-w-2xl">
+<h2 class="font-label-md text-primary uppercase tracking-[0.3em] mb-4">Core Expertise</h2>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">Comprehensive Technology Leadership Services</h3>
+</div>
+<a class="text-primary font-label-md flex items-center gap-2 hover:underline" href="#">
+                View All Services <span class="material-symbols-outlined">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up">
+<div class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">psychology</span>
+<h4 class="font-headline-md text-xl mb-4">Fractional CTO</h4>
+<p class="text-on-surface-variant mb-8">Strategic technology leadership and roadmapping for startups and scaling enterprises without the full-time overhead.</p>
+<ul class="space-y-3 mb-8 text-sm text-on-surface/80">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Tech Stack Audits</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Hiring &amp; Team Building</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Technical Due Diligence</li>
+</ul>
+</div>
+<div class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">hub</span>
+<h4 class="font-headline-md text-xl mb-4">SaaS Architecture</h4>
+<p class="text-on-surface-variant mb-8">Designing multi-tenant, cloud-native platforms that prioritize security, observability, and cost-efficient scaling.</p>
+<ul class="space-y-3 mb-8 text-sm text-on-surface/80">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Microservices Design</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Cloud Migration</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> API Infrastructure</li>
+</ul>
+</div>
+<div class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6">auto_awesome</span>
+<h4 class="font-headline-md text-xl mb-4">AI &amp; Automation</h4>
+<p class="text-on-surface-variant mb-8">Integrating Generative AI and ML workflows to eliminate operational bottlenecks and create new product value.</p>
+<ul class="space-y-3 mb-8 text-sm text-on-surface/80">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> LLM Implementation</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Workflow Automation</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Predictive Analytics</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 5: Recent Case Studies -->
+<section class="relative z-10 py-section-gap bg-surface-container-low/30 overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16 reveal-up">
+<h2 class="font-label-md text-secondary uppercase tracking-[0.3em] mb-4">Proof of Execution</h2>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">Recent Strategic Impact</h3>
+</div>
+<div class="flex gap-gutter overflow-x-auto pb-12 custom-scrollbar reveal-up" id="case-studies-scroll">
+<div class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Enterprise Platform Modernization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ3Mv1RlOOdOCg-JtbT1Rtn7EHMRqTEEOJXvSOoR9WgDij-llUVOA5zdzzOxXw1lGOp83pHiwBdc3yqMoiB-nxfL8re7-voA57p5w_KhhDkYpgHoL4Lfv_ZozKIxBXOkso8hDo1sn8nkeLXEHF98hKYDTLQ5pMHzKGkrM1u-4ESFiR9ZfIBog-FTJ4iDE2Woe47r-EyFgRGsrKWxjYIYAHjjFRBBNKN9Q0YwH8toswn57EUSR3UBGFl8OupgzIP8XpcA3mqCLvQ9D2"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<div class="p-8">
+<div class="text-secondary font-label-md text-xs mb-2">ENTERPRISE SAAS</div>
+<h4 class="font-headline-md text-xl mb-4">Platform Modernization &amp; Scalability Audit</h4>
+<p class="text-on-surface-variant text-sm mb-6">Transitioned a legacy monolithic HR platform to a distributed microservices architecture, reducing latency by 60% and infrastructure costs by 40%.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all" href="#">Read Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img alt="AI Integration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC08bGRu-JD1iw_Q7_zVYc41hB4dLxhgBXRYQ-MrqnVNAUUYFDfNbQJU_sTHlzGFd_QLLkXx0kmi82W3qp80oVqAiZHOswqY3twtvUIhE9BtBmSqP6lNy8KzZ1SKtYKQreUJWkf7UnniqyVu-TdYEz0ivXzZTy3CB6FPIl9YNyMfSsEAZMmy6wscZ-GIgiToK-NX6cij5h-LSkSuLGGUtxKBlh2xh0eNkC3Tp0YHO9yDC5uvbSV-7Nv2RdsykuGxJ9ueh5X4kEIUwHN"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<div class="p-8">
+<div class="text-tertiary font-label-md text-xs mb-2">AI &amp; AUTOMATION</div>
+<h4 class="font-headline-md text-xl mb-4">Generative AI Customer Support Engine</h4>
+<p class="text-on-surface-variant text-sm mb-6">Designed and deployed a RAG-based AI support assistant for a FinTech startup, handling 85% of tier-1 queries with 92% customer satisfaction.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all" href="#">Read Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<div class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group">
+<div class="aspect-video relative overflow-hidden">
+<img alt="E-commerce Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB22J4tw7kxiRjB2dGWg4vXwnXQd8CWOKp9UXCheNJQPptPKo4ykncE9nFiXtiFFeGQeUUbsMvCkTyA-liDVsi5y2pZ0Nvjqhmv-RqkUxCt7W9Uv8FCuQb0ec-IUnuObrlweb-Ctb1_noMkrIK_EfIiHl0RuMbbnhE6U6E_LL-_polfqo5_qxATfRTlT1j0qsSdk4YDN0ykFeCrUWwIl8ONsC843JFwNO3kkFhOEGPOR9PXJdyMvXhxSDBMgw4UnJ1cgmYTDTk-yTj"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<div class="p-8">
+<div class="text-primary font-label-md text-xs mb-2">HIGH-TRAFFIC WEB</div>
+<h4 class="font-headline-md text-xl mb-4">Scalable E-commerce Infrastructure</h4>
+<p class="text-on-surface-variant text-sm mb-6">Architected a headless commerce solution capable of handling 50k concurrent users during peak flash-sale events without performance degradation.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all" href="#">Read Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section><section class="relative z-10 py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 reveal-up">
+<h2 class="font-label-md text-tertiary uppercase tracking-[0.3em] mb-4">Market Validation</h2>
+<h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">Executive Feedback</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up">
+<div class="glass-card p-8 md:p-10 rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="font-body-lg italic text-on-surface leading-relaxed mb-8">
+                    "The most strategic technical partner we have ever engaged with. A master of navigating complex architecture while maintaining a sharp focus on business outcomes. His leadership transformed our engineering culture."
+                </p>
+</div>
+<div class="border-t border-outline-variant/30 pt-6">
+<div class="text-sm font-bold text-on-surface">Chief Technology Officer</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Series B FinTech</div>
+</div>
+</div>
+<div class="glass-card p-8 md:p-10 rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group border-primary/20">
+<div>
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="font-body-lg italic text-on-surface leading-relaxed mb-8">
+                    "He possesses a rare ability to bridge the gap between high-level business strategy and deep-level infrastructure code. His audit saved us months of wasted development cycles and redirected us toward a scalable path."
+                </p>
+</div>
+<div class="border-t border-outline-variant/30 pt-6">
+<div class="text-sm font-bold text-on-surface">Technical Founder</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Enterprise SaaS Platform</div>
+</div>
+</div>
+<div class="glass-card p-8 md:p-10 rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex gap-1 text-secondary mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="font-body-lg italic text-on-surface leading-relaxed mb-8">
+                    "Exceptional technical foresight. He didn't just build for our current needs; he architected a system that effortlessly handled a 10x traffic spike during our global launch. Truly an elite technical authority."
+                </p>
+</div>
+<div class="border-t border-outline-variant/30 pt-6">
+<div class="text-sm font-bold text-on-surface">VP of Engineering</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Global E-commerce Leader</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap text-center">
+<div class="glass-card p-12 md:p-20 rounded-[3rem] reveal-up overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 -z-10"></div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8">Ready to Scale Your Technical Vision?</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                Whether you need a Fractional CTO to lead your engineering team or a Lead Architect to build your next-gen SaaS platform, let's discuss how we can drive results.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="px-10 py-5 bg-primary text-on-primary font-label-md text-lg font-bold rounded-2xl glow-hover transition-all">Schedule Strategy Call</button>
+<button class="px-10 py-5 glass-card text-on-surface font-label-md text-lg font-bold rounded-2xl glow-hover transition-all">Download Services Guide</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="relative z-10 w-full py-24 bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-6">
+<div class="flex items-center gap-4 mb-8">
+<img alt="Muhammad Ahsan Ali Logo" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsgMa6Q3AUrimJawFsuMPq8B7NVru_1KBFEWJppr3PeHHrdRhLSTXaTGfy7W69LjlrPx7NA0NrjBZLmmjXVqDZcTEeeghy3x6O64hRGRb2HutP8l_5lOYAmT0frmtSrpn3Iu89Ou3KwZPETnTD42-VZjAQnmV-8SEDvfVSaprjSX69OuCfmDaIbY-aaT54wtTEvKOz41b0e4c4gMUPZl6UsIKCa7r0gBCTsVLDpUIBapYfkwIq8comiCw8w"/>
+<div class="font-headline-md text-2xl text-on-surface">Muhammad Ahsan Ali</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
+                Strategic technology leadership for high-growth startups and established enterprises. Delivering clarity in complexity. MSc Researcher focusing on AI and scalable architectures.
+            </p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">terminal</span></a>
+</div>
+</div>
+<div class="md:col-span-6 flex flex-col md:items-end justify-between mt-12 md:mt-0">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-gutter gap-y-8 mb-12 md:mb-0 text-left md:text-right">
+<div class="space-y-4">
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary">Navigation</h5>
+<nav class="flex flex-col gap-2">
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">Services</a>
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">Case Studies</a>
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">Research</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h5 class="text-xs font-bold uppercase tracking-widest text-secondary">Connect</h5>
+<nav class="flex flex-col gap-2">
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">LinkedIn</a>
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">GitHub</a>
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">Medium</a>
+</nav>
+</div>
+<div class="space-y-4">
+<h5 class="text-xs font-bold uppercase tracking-widest text-tertiary">Community</h5>
+<nav class="flex flex-col gap-2">
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">Mentorship</a>
+<a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="#">Newsletter</a>
+</nav>
+</div>
+</div>
+<div class="font-body-md text-xs text-on-surface-variant opacity-60 text-center md:text-right">
+                © 2024 Muhammad Ahsan Ali. Fractional CTO &amp; Engineering Leader. All rights reserved.
+            </div>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Scroll Reveal System
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
+
+        // Particle Data Stream System
+        const container = document.getElementById('stream-container');
+        const streamCount = 25;
+        
+        function createStream() {
+            const stream = document.createElement('div');
+            stream.className = 'data-stream';
+            const left = Math.random() * 100;
+            const delay = Math.random() * 8;
+            const duration = 4 + Math.random() * 6;
+            stream.style.left = `${left}%`;
+            stream.style.animation = `stream-move ${duration}s linear ${delay}s infinite`;
+            container.appendChild(stream);
+        }
+
+        for (let i = 0; i < streamCount; i++) {
+            createStream();
+        }
+
+        // Mouse Tracking Glow and Parallax
+        const cursorGlow = document.getElementById('cursor-glow');
+        const orb1 = document.getElementById('orb-1');
+        const orb2 = document.getElementById('orb-2');
+        
+        let mouseX = 0;
+        let mouseY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            cursorGlow.style.left = `${mouseX}px`;
+            cursorGlow.style.top = `${mouseY}px`;
+            cursorGlow.style.opacity = '1';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursorGlow.style.opacity = '0';
+        });
+
+        function updateParallax() {
+            currentX += (mouseX - currentX) * 0.05;
+            currentY += (mouseY - currentY) * 0.05;
+            
+            const moveX = (currentX / window.innerWidth - 0.5) * 50;
+            const moveY = (currentY / window.innerHeight - 0.5) * 50;
+            
+            if(orb1) orb1.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            if(orb2) orb2.style.transform = `translate(${-moveX * 0.8}px, ${-moveY * 0.8}px)`;
+            
+            requestAnimationFrame(updateParallax);
+        }
+        
+        updateParallax();
+
+        // Horizontal scroll with wheel support
+        const scrollContainer = document.getElementById('case-studies-scroll');
+        if (scrollContainer) {
+            scrollContainer.addEventListener('wheel', (evt) => {
+                evt.preventDefault();
+                scrollContainer.scrollLeft += evt.deltaY;
+            });
+        }
+    });
+</script>
+</body></html>

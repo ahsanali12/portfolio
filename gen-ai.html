@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Study: Generative AI Customer Support Engine | Muhammad Ahsan Ali</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(2, 6, 23, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            border-color: rgba(173, 198, 255, 0.3);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+        }
+        .light-sweep {
+            position: relative;
+            overflow: hidden;
+        }
+        .light-sweep::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(173, 198, 255, 0.05), transparent);
+            transition: 0.5s;
+        }
+        .light-sweep:hover::after {
+            left: 100%;
+        }
+        body {
+            background-color: #0c1324;
+            color: #dce1fb;
+            scroll-behavior: smooth;
+        }
+        .bg-grid {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .atmospheric-orb {
+            position: fixed;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.15;
+        }
+    </style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed-dim": "#ddb7ff",
+                "on-surface": "#dce1fb",
+                "surface-dim": "#0c1324",
+                "secondary": "#4cd7f6",
+                "on-tertiary-fixed": "#2c0051",
+                "on-tertiary": "#490080",
+                "inverse-on-surface": "#2a3043",
+                "surface-container-low": "#151b2d",
+                "on-surface-variant": "#c2c6d6",
+                "primary": "#adc6ff",
+                "error-container": "#93000a",
+                "secondary-fixed": "#acedff",
+                "primary-container": "#4d8eff",
+                "secondary-fixed-dim": "#4cd7f6",
+                "outline-variant": "#424754",
+                "surface-tint": "#adc6ff",
+                "on-background": "#dce1fb",
+                "surface-container-lowest": "#070d1f",
+                "surface-bright": "#33394c",
+                "on-primary": "#002e6a",
+                "error": "#ffb4ab",
+                "tertiary-fixed": "#f0dbff",
+                "on-error-container": "#ffdad6",
+                "primary-fixed": "#d8e2ff",
+                "on-primary-fixed-variant": "#004395",
+                "tertiary-container": "#b76dff",
+                "on-secondary-fixed-variant": "#004e5c",
+                "on-secondary-fixed": "#001f26",
+                "on-secondary-container": "#00424e",
+                "surface-container": "#191f31",
+                "outline": "#8c909f",
+                "on-error": "#690005",
+                "surface-container-high": "#23293c",
+                "on-tertiary-container": "#400071",
+                "on-secondary": "#003640",
+                "primary-fixed-dim": "#adc6ff",
+                "tertiary": "#ddb7ff",
+                "surface": "#0c1324",
+                "secondary-container": "#03b5d3",
+                "on-primary-container": "#00285d",
+                "background": "#0c1324",
+                "surface-container-highest": "#2e3447",
+                "inverse-primary": "#005ac2",
+                "surface-variant": "#2e3447",
+                "on-tertiary-fixed-variant": "#6900b3",
+                "on-primary-fixed": "#001a42",
+                "inverse-surface": "#dce1fb"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "base": "8px",
+                "margin-mobile": "16px",
+                "gutter": "24px",
+                "container-max": "1280px",
+                "section-gap": "120px",
+                "margin-desktop": "64px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Geist"
+                ],
+                "label-md": [
+                        "Geist"
+                ],
+                "headline-lg": [
+                        "Geist"
+                ],
+                "display-lg": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "code-sm": [
+                        "geist"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg": [
+                        "72px",
+                        {
+                                "lineHeight": "80px",
+                                "letterSpacing": "-0.04em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "code-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "18px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-surface-dim font-body-md text-on-surface antialiased bg-grid overflow-x-hidden">
+<!-- Atmospheric Effects -->
+<div class="atmospheric-orb w-[600px] h-[600px] bg-primary top-[-300px] left-[-100px]"></div>
+<div class="atmospheric-orb w-[500px] h-[500px] bg-tertiary bottom-[-200px] right-[-100px]"></div>
+<!-- Top Navigation -->
+<nav class="w-full sticky top-0 z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 h-20">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">
+                Muhammad Ahsan Ali
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold border-b-2 border-primary pb-1" href="#">Case Studies</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#">Research</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#">Mentorship</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md text-label-md uppercase tracking-widest hover:opacity-90 transition-all">
+                    Book Strategy Call
+                </button>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-section-gap pb-24 max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 space-y-base">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-label-md font-label-md uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                AI &amp; Fintech Architecture
+            </div>
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg leading-tight text-on-surface">
+                Generative AI <br/>
+<span class="text-primary">Customer Support Engine</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Redefining customer experience for high-growth Fintech via RAG-based LLM architectures and real-time safety guardrails.
+            </p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="glass-card p-4 rounded-xl aspect-square flex items-center justify-center">
+<img alt="Generative AI Logic Flow" class="rounded-lg w-full h-full object-cover" data-alt="A sophisticated abstract visualization of a neural network with glowing light nodes connected by shimmering fiber optic threads. The aesthetic is dark and technical, using deep blacks and electric blue highlights to evoke a feeling of advanced artificial intelligence. The composition is centered and symmetrical, suggesting structure and architectural precision in software engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHXn9ecUbJeShAsj_MesX3yCaZTUUe5Cgd9i-8h9ZWpd-2A6eYfmvibI_jAmSZO_B4eWQwbDfJ7uwmWyH7lItxFLa56_W-d4nUdQeqQxgDtRwEsMiaFmtLujBBz7ooG_cB_LveZv8LWzFqBsvc47sY3QvCcnvmD6wrHd_8l4CUB0l1IRu-J_CNApKphWV1rNYdm2koTtDH5mDrT4GpHGxFxa4HpC37QvRi_z5-O1PSKUBjnnCAVnJcvDkpKgbc8zsFXqnXeZ-C1gqA"/>
+</div>
+</div>
+</header>
+<!-- Key Metrics Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-24 border-y border-white/5">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="space-y-1">
+<div class="text-primary font-headline-lg text-headline-lg">85%</div>
+<div class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Query Automation</div>
+</div>
+<div class="space-y-1">
+<div class="text-secondary font-headline-lg text-headline-lg">92%</div>
+<div class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Customer Satisfaction</div>
+</div>
+<div class="space-y-1">
+<div class="text-tertiary font-headline-lg text-headline-lg">24/7</div>
+<div class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Active Support</div>
+</div>
+<div class="space-y-1">
+<div class="text-primary font-headline-lg text-headline-lg">&lt;2s</div>
+<div class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Latency Target</div>
+</div>
+</div>
+</section>
+<!-- Detailed Content -->
+<main class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="grid md:grid-cols-12 gap-24">
+<!-- Sticky Sidebar -->
+<aside class="md:col-span-4 space-y-12">
+<div class="sticky top-32 space-y-8">
+<div class="space-y-4">
+<h3 class="font-label-md text-label-md uppercase tracking-[0.2em] text-primary">The Objective</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            A rapidly scaling Fintech startup faced a bottleneck in customer operations. With a 300% YoY growth in tickets, the human-only support model was no longer sustainable. The goal was to automate 85% of standard queries without sacrificing the high-trust requirements of financial services.
+                        </p>
+</div>
+<div class="glass-card p-6 rounded-xl space-y-4 border-l-4 border-l-primary">
+<span class="material-symbols-outlined text-primary">architecture</span>
+<h4 class="font-headline-md text-headline-md text-xl">System Specs</h4>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                GPT-4o Integration
+                            </li>
+<li class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                Pinecone Vector DB
+                            </li>
+<li class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                LangChain Framework
+                            </li>
+<li class="flex items-center gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                Custom PII Scrubber
+                            </li>
+</ul>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<article class="md:col-span-8 space-y-section-gap">
+<!-- Section: Technical Execution -->
+<section class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg">Technical Execution</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            The architecture was built on a Retrieval-Augmented Generation (RAG) framework, ensuring the LLM remained grounded in the startup's specific policy documentation and real-time transaction data.
+                        </p>
+</div>
+<!-- Flow Diagram Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-base">
+<div class="glass-card p-8 rounded-xl light-sweep space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-3xl">database</span>
+<span class="text-code-sm font-code-sm text-primary bg-primary/10 px-2 py-0.5 rounded">Retrieval</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-xl">Semantic Search</h4>
+<p class="text-on-surface-variant font-body-md">
+                                Multi-stage retrieval using hybrid search (Keyword + Semantic) across 50,000+ support docs and policy PDFs.
+                            </p>
+</div>
+<div class="glass-card p-8 rounded-xl light-sweep space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-3xl">verified_user</span>
+<span class="text-code-sm font-code-sm text-secondary bg-secondary/10 px-2 py-0.5 rounded">Safety</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-xl">Guardrail Engine</h4>
+<p class="text-on-surface-variant font-body-md">
+                                Real-time toxicity filtering and PII masking to prevent the exposure of sensitive financial data during generation.
+                            </p>
+</div>
+<div class="glass-card md:col-span-2 p-8 rounded-xl light-sweep flex flex-col md:flex-row gap-8 items-center">
+<div class="md:w-1/2 space-y-4">
+<h4 class="font-headline-md text-headline-md text-xl">Reasoning Loop</h4>
+<p class="text-on-surface-variant font-body-md">
+                                    Implementation of ReAct prompting strategies allowed the agent to browse internal APIs for real-time transaction status before responding to user queries.
+                                </p>
+</div>
+<div class="md:w-1/2 bg-surface-container-highest p-4 rounded-lg font-code-sm text-code-sm text-primary">
+<pre><code>{
+  "action": "lookup_transaction",
+  "params": { "id": "TXN_49201" },
+  "observation": "Success",
+  "thought": "Update user on clearance status"
+}</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Business Impact -->
+<section class="space-y-12">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg">Business Impact</h2>
+<div class="grid md:grid-cols-3 gap-gutter">
+<div class="p-6 bg-surface-container-low rounded-xl border border-white/5 space-y-2">
+<h5 class="text-secondary font-headline-md text-headline-md">14,000+</h5>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Weekly Tickets Handled</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-white/5 space-y-2">
+<h5 class="text-primary font-headline-md text-headline-md">65%</h5>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">OpEx Reduction</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-white/5 space-y-2">
+<h5 class="text-tertiary font-headline-md text-headline-md">Instant</h5>
+<p class="text-label-md text-on-surface-variant uppercase tracking-wider">Response Time</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-12 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]">format_quote</span>
+</div>
+<blockquote class="relative z-10 space-y-6">
+<p class="font-headline-md text-headline-md italic leading-relaxed text-on-surface">
+                                "The AI Engine didn't just solve tickets; it changed how we think about scale. We're now serving three times the customers with the same operations head count."
+                            </p>
+<footer class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-white/10 overflow-hidden">
+<img alt="Client Portrait" class="object-cover w-full h-full" data-alt="Professional headshot of a Fintech executive in a dark navy suit. The background is a blurred high-end office interior with warm ambient lighting. The person has a confident and visionary expression, fitting the role of a CTO or Head of Operations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_j_RqNkrUlfPoPJuEa_4ixC1W5XKmUxwMsq307e2p9pxmcCNqBVScUbpOlQY2gq7N8-3vjoAB2XK3RRqtLqwvouSBehO-9XdqJdkczXxexmFy0PUg7tv9V2-lMd086P-bTK28UtfzjbOro-V9eTwdiJZyAef01ibEJ2cBHmyYiWj3li1sLZc3WQaD0wh3v0FcftNa6MytsdJtHoP7WIopjipsCPpEWoOOGVLKHmvWZGxqyBYIhB3FSM_L0WjGY39LUgV7EyJyNQxR"/>
+</div>
+<div>
+<cite class="font-bold text-on-surface not-italic">David Chen</cite>
+<p class="text-on-surface-variant text-label-md uppercase tracking-wider">CTO, NeoFlow Finance</p>
+</div>
+</footer>
+</blockquote>
+</div>
+</section>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-base bg-surface-container-lowest border-t border-white/5">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="space-y-4 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">Muhammad Ahsan Ali</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    © 2024 Muhammad Ahsan Ali. Technical Leadership for High-Growth Ventures.
+                </p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Medium</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for depth effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.atmospheric-orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            orbs.forEach((orb, index) => {
+                const moveX = (x - 0.5) * (index + 1) * 50;
+                const moveY = (y - 0.5) * (index + 1) * 50;
+                orb.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+        });
+    </script>
+</body></html>
