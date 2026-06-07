@@ -1,531 +1,391 @@
 <!doctype html>
 
 <html class="dark" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Home — Muhammad Ahsan Ali</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="js/tailwind-config.js"></script>
-    <link rel="stylesheet" href="css/global.css" />
-  </head>
-  <body class="font-body-md text-on-surface antialiased bg-surface-dim">
-    <div class="mouse-glow" id="cursor-glow"></div>
-    <site-header></site-header>
-    <main class="relative">
-      <!-- Atmospheric Background Elements -->
-      <div
-        class="fixed inset-0 architecture-grid opacity-20 pointer-events-none"
-      ></div>
-      <div
-        class="fixed inset-0 pointer-events-none overflow-hidden"
-        id="stream-container"
-      ></div>
-      <div
-        class="floating-orb w-[600px] h-[600px] bg-primary top-[-10%] right-[-10%]"
-        id="orb-1"
-      ></div>
-      <div
-        class="floating-orb w-[500px] h-[500px] bg-secondary bottom-[-10%] left-[-10%]"
-        id="orb-2"
-      ></div>
-      <!-- Section 1: Hero -->
-      <section
-        class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-48 pb-32 min-h-screen flex items-center"
-      >
-        <div class="max-w-4xl">
-          <div class="flex flex-wrap gap-3 mb-8 reveal-up">
-            <span
-              class="badge-hover px-3 py-1 rounded-full border border-secondary/30 bg-secondary/10 text-secondary font-label-md text-xs uppercase tracking-widest flex items-center gap-2 cursor-default"
-            >
-              <span class="material-symbols-outlined text-[14px]"
-                >military_tech</span
-              >
-              11+ Years Experience
-            </span>
-            <span
-              class="badge-hover px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-md text-xs uppercase tracking-widest cursor-default"
-              >Enterprise Systems</span
-            >
-            <span
-              class="badge-hover px-3 py-1 rounded-full border border-tertiary/30 bg-tertiary/10 text-tertiary font-label-md text-xs uppercase tracking-widest cursor-default"
-              >Engineering Leadership</span
-            >
-            <span
-              class="badge-hover px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-md text-xs uppercase tracking-widest cursor-default"
-              >MSc Researcher</span
-            >
-          </div>
-          <h1
-            class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight tracking-tighter reveal-up"
-          >
-            Building
-            <span class="text-secondary breath-glow">Software Businesses</span>,
-            Engineering Teams, and Technology Infrastructure That Scale.
-          </h1>
-          <p
-            class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl reveal-up"
-          >
-            Fractional CTO, Technical Founder Partner, and SaaS Architect
-            delivering clarity in complexity. Transforming ambitious business
-            operations into resilient, high-performance digital platforms.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 reveal-up">
-            <button
-              class="px-8 py-4 bg-primary text-on-primary font-label-md text-lg font-bold rounded-xl glow-hover pulse-primary transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              Book CTO Consultation
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
-            <button
-              class="px-8 py-4 glass-card text-primary font-label-md text-lg font-bold rounded-xl glow-hover transition-all duration-300"
-            >
-              Explore Case Studies
-            </button>
-          </div>
-        </div>
-      </section>
-      <!-- Section 2: Strategic Authority (About Integration) -->
-      <section
-        class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap"
-      >
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div class="reveal-up">
-            <h2
-              class="font-label-md text-secondary uppercase tracking-[0.3em] mb-4"
-            >
-              The Strategic Partner
-            </h2>
-            <h3
-              class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8"
-            >
-              Strategic Authority for Modern Enterprises
-            </h3>
-            <p class="font-body-lg text-on-surface-variant mb-8">
-              Bridging the gap between ambitious business vision and bulletproof
-              technical execution. My approach combines decadal industry
-              experience with academic rigor in AI and Distributed Systems.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-primary">
-                  <span class="material-symbols-outlined">groups</span>
-                  <span class="font-bold">Engineering Leadership</span>
-                </div>
-                <p class="text-sm text-on-surface-variant">
-                  Building high-performance cultures and mentorship frameworks.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-secondary">
-                  <span class="material-symbols-outlined">architecture</span>
-                  <span class="font-bold">Enterprise Delivery</span>
-                </div>
-                <p class="text-sm text-on-surface-variant">
-                  Architecting systems that handle millions of requests
-                  reliably.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-tertiary">
-                  <span class="material-symbols-outlined">cycle</span>
-                  <span class="font-bold">Lifecycle Ownership</span>
-                </div>
-                <p class="text-sm text-on-surface-variant">
-                  End-to-end technical strategy from MVP to Global Scale.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-primary-fixed-dim">
-                  <span class="material-symbols-outlined">school</span>
-                  <span class="font-bold">Academic Credibility</span>
-                </div>
-                <p class="text-sm text-on-surface-variant">
-                  MSc Research in AI and Scalable Architectures.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="relative reveal-up">
-            <div
-              class="aspect-square glass-card rounded-3xl overflow-hidden relative group"
-            >
-              <img
-                alt="Technical Infrastructure Visualization"
-                class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuANVCufKumhMcD3zrKV7CSp3hpv2pT0xfi7UbJKkM-emOmG99ZmLeNayHwzGVUY-aWucTSdJwksU5W_Y6YLF8VxTYX_afcNmQIs9aT8yKkfNZm0A-pTqqklOdexC9AudzYV6uICCnzM8ewrFo6YB9PZVvb2vPetAwT4sxAbk59BdLckKAtqVLGrDMAJJZZmjRUHHahxOUKatpMNEXZK_8_ezYqRR7IBlHbaCAtbMjJJFK-MpvHm1QBDUeWIpHCNktVqHogclelHuCDR"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"
-              ></div>
-              <div class="absolute bottom-8 left-8 right-8">
-                <div class="p-4 glass-card rounded-xl">
-                  <div
-                    class="text-xs text-secondary-fixed uppercase tracking-widest mb-1"
-                  >
-                    Active Research
-                  </div>
-                  <div class="text-on-surface font-bold">
-                    Optimizing Neural Net Architectures for Real-time Edge
-                    Computing
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Section 3: Impact in Numbers -->
-      <section
-        class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24"
-      >
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter reveal-up">
-          <div
-            class="glass-card p-8 rounded-2xl text-center group hover:border-secondary/40 transition-all"
-          >
-            <div
-              class="text-secondary font-display-lg text-4xl md:text-5xl mb-2 breath-glow"
-            >
-              11+
-            </div>
-            <div
-              class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs"
-            >
-              Years Professional Exp
-            </div>
-          </div>
-          <div
-            class="glass-card p-8 rounded-2xl text-center group hover:border-primary/40 transition-all"
-          >
-            <div
-              class="text-primary font-display-lg text-4xl md:text-5xl mb-2 breath-glow"
-            >
-              50+
-            </div>
-            <div
-              class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs"
-            >
-              Global Projects Delivered
-            </div>
-          </div>
-          <div
-            class="glass-card p-8 rounded-2xl text-center group hover:border-tertiary/40 transition-all"
-          >
-            <div
-              class="text-tertiary font-display-lg text-4xl md:text-5xl mb-2 breath-glow"
-            >
-              $100M
-            </div>
-            <div
-              class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs"
-            >
-              Value Architected
-            </div>
-          </div>
-          <div
-            class="glass-card p-8 rounded-2xl text-center group hover:border-secondary/40 transition-all"
-          >
-            <div
-              class="text-secondary font-display-lg text-4xl md:text-5xl mb-2 breath-glow"
-            >
-              99.9%
-            </div>
-            <div
-              class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs"
-            >
-              System Uptime Record
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Section 4: Strategic Offerings -->
-      <section
-        class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap"
-      >
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal-up"
-        >
-          <div class="max-w-2xl">
-            <h2
-              class="font-label-md text-primary uppercase tracking-[0.3em] mb-4"
-            >
-              Core Expertise
-            </h2>
-            <h3
-              class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface"
-            >
-              Comprehensive Technology Leadership Services
-            </h3>
-          </div>
-          <a
-            class="text-primary font-label-md flex items-center gap-2 hover:underline"
-            href="services.html"
-          >
-            View All Services
-            <span class="material-symbols-outlined">arrow_outward</span>
-          </a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up">
-          <div
-            class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all"
-          >
-            <span class="material-symbols-outlined text-4xl text-secondary mb-6"
-              >psychology</span
-            >
-            <h4 class="font-headline-md text-xl mb-4">Fractional CTO</h4>
-            <p class="text-on-surface-variant mb-8">
-              Strategic technology leadership and roadmapping for startups and
-              scaling enterprises without the full-time overhead.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-on-surface/80">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Tech
-                Stack Audits
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                Hiring &amp; Team Building
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                Technical Due Diligence
-              </li>
-            </ul>
-          </div>
-          <div
-            class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all"
-          >
-            <span class="material-symbols-outlined text-4xl text-primary mb-6"
-              >hub</span
-            >
-            <h4 class="font-headline-md text-xl mb-4">SaaS Architecture</h4>
-            <p class="text-on-surface-variant mb-8">
-              Designing multi-tenant, cloud-native platforms that prioritize
-              security, observability, and cost-efficient scaling.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-on-surface/80">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                Microservices Design
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Cloud
-                Migration
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> API
-                Infrastructure
-              </li>
-            </ul>
-          </div>
-          <div
-            class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all"
-          >
-            <span class="material-symbols-outlined text-4xl text-tertiary mb-6"
-              >auto_awesome</span
-            >
-            <h4 class="font-headline-md text-xl mb-4">AI &amp; Automation</h4>
-            <p class="text-on-surface-variant mb-8">
-              Integrating Generative AI and ML workflows to eliminate
-              operational bottlenecks and create new product value.
-            </p>
-            <ul class="space-y-3 mb-8 text-sm text-on-surface/80">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> LLM
-                Implementation
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-                Workflow Automation
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-                Predictive Analytics
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- Section 5: Recent Case Studies -->
-      <section
-        class="relative z-10 py-section-gap bg-surface-container-low/30 overflow-hidden"
-      >
-        <div
-          class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
-        >
-          <div class="mb-16 reveal-up">
-            <h2
-              class="font-label-md text-secondary uppercase tracking-[0.3em] mb-4"
-            >
-              Proof of Execution
-            </h2>
-            <h3
-              class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface"
-            >
-              Recent Strategic Impact
-            </h3>
-          </div>
-          <div
-            class="flex gap-gutter overflow-x-auto pb-12 custom-scrollbar reveal-up"
-            id="case-studies-scroll"
-          >
-            <div
-              class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group"
-            >
-              <div class="aspect-video relative overflow-hidden">
-                <img
-                  alt="Enterprise Platform Modernization"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ3Mv1RlOOdOCg-JtbT1Rtn7EHMRqTEEOJXvSOoR9WgDij-llUVOA5zdzzOxXw1lGOp83pHiwBdc3yqMoiB-nxfL8re7-voA57p5w_KhhDkYpgHoL4Lfv_ZozKIxBXOkso8hDo1sn8nkeLXEHF98hKYDTLQ5pMHzKGkrM1u-4ESFiR9ZfIBog-FTJ4iDE2Woe47r-EyFgRGsrKWxjYIYAHjjFRBBNKN9Q0YwH8toswn57EUSR3UBGFl8OupgzIP8XpcA3mqCLvQ9D2"
-                />
-                <div
-                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"
-                ></div>
-              </div>
-              <div class="p-8">
-                <div class="text-secondary font-label-md text-xs mb-2">
-                  ENTERPRISE SAAS
-                </div>
-                <h4 class="font-headline-md text-xl mb-4">
-                  Platform Modernization &amp; Scalability Audit
-                </h4>
-                <p class="text-on-surface-variant text-sm mb-6">
-                  Transitioned a legacy monolithic HR platform to a distributed
-                  microservices architecture, reducing latency by 60% and
-                  infrastructure costs by 40%.
-                </p>
-                <a
-                  class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all"
-                  href="case-studies.html"
-                  >Read Case Study
-                  <span class="material-symbols-outlined text-sm"
-                    >arrow_forward</span
-                  ></a
-                >
-              </div>
-            </div>
-            <div
-              class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group"
-            >
-              <div class="aspect-video relative overflow-hidden">
-                <img
-                  alt="AI Integration"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC08bGRu-JD1iw_Q7_zVYc41hB4dLxhgBXRYQ-MrqnVNAUUYFDfNbQJU_sTHlzGFd_QLLkXx0kmi82W3qp80oVqAiZHOswqY3twtvUIhE9BtBmSqP6lNy8KzZ1SKtYKQreUJWkf7UnniqyVu-TdYEz0ivXzZTy3CB6FPIl9YNyMfSsEAZMmy6wscZ-GIgiToK-NX6cij5h-LSkSuLGGUtxKBlh2xh0eNkC3Tp0YHO9yDC5uvbSV-7Nv2RdsykuGxJ9ueh5X4kEIUwHN"
-                />
-                <div
-                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"
-                ></div>
-              </div>
-              <div class="p-8">
-                <div class="text-tertiary font-label-md text-xs mb-2">
-                  AI &amp; AUTOMATION
-                </div>
-                <h4 class="font-headline-md text-xl mb-4">
-                  Generative AI Customer Support Engine
-                </h4>
-                <p class="text-on-surface-variant text-sm mb-6">
-                  Designed and deployed a RAG-based AI support assistant for a
-                  FinTech startup, handling 85% of tier-1 queries with 92%
-                  customer satisfaction.
-                </p>
-                <a
-                  class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all"
-                  href="case-studies.html"
-                  >Read Case Study
-                  <span class="material-symbols-outlined text-sm"
-                    >arrow_forward</span
-                  ></a
-                >
-              </div>
-            </div>
-            <div
-              class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group"
-            >
-              <div class="aspect-video relative overflow-hidden">
-                <img
-                  alt="E-commerce Architecture"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB22J4tw7kxiRjB2dGWg4vXwnXQd8CWOKp9UXCheNJQPptPKo4ykncE9nFiXtiFFeGQeUUbsMvCkTyA-liDVsi5y2pZ0Nvjqhmv-RqkUxCt7W9Uv8FCuQb0ec-IUnuObrlweb-Ctb1_noMkrIK_EfIiHl0RuMbbnhE6U6E_LL-_polfqo5_qxATfRTlT1j0qsSdk4YDN0ykFeCrUWwIl8ONsC843JFwNO3kkFhOEGPOR9PXJdyMvXhxSDBMgw4UnJ1cgmYTDTk-yTj"
-                />
-                <div
-                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"
-                ></div>
-              </div>
-              <div class="p-8">
-                <div class="text-primary font-label-md text-xs mb-2">
-                  HIGH-TRAFFIC WEB
-                </div>
-                <h4 class="font-headline-md text-xl mb-4">
-                  Scalable E-commerce Infrastructure
-                </h4>
-                <p class="text-on-surface-variant text-sm mb-6">
-                  Architected a headless commerce solution capable of handling
-                  50k concurrent users during peak flash-sale events without
-                  performance degradation.
-                </p>
-                <a
-                  class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all"
-                  href="case-studies.html"
-                  >Read Case Study
-                  <span class="material-symbols-outlined text-sm"
-                    >arrow_forward</span
-                  ></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Final CTA Section -->
-      <section
-        class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap text-center"
-      >
-        <div
-          class="glass-card p-12 md:p-20 rounded-[3rem] reveal-up overflow-hidden relative"
-        >
-          <div
-            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 -z-10"
-          ></div>
-          <h2
-            class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8"
-          >
-            Ready to Scale Your Technical Vision?
-          </h2>
-          <p
-            class="font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto"
-          >
-            Whether you need a Fractional CTO to lead your engineering team or a
-            Lead Architect to build your next-gen SaaS platform, let's discuss
-            how we can drive results.
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <button
-              class="px-10 py-5 bg-primary text-on-primary font-label-md text-lg font-bold rounded-2xl glow-hover transition-all"
-            >
-              Schedule Strategy Call
-            </button>
-            <button
-              class="px-10 py-5 glass-card text-on-surface font-label-md text-lg font-bold rounded-2xl glow-hover transition-all"
-            >
-              Download Services Guide
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-    <site-footer></site-footer>
 
-    <script src="js/components/Header.js"></script>
-    <script src="js/components/Footer.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Home — Muhammad Ahsan Ali</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+
+<body class="font-body-md text-on-surface antialiased bg-surface-dim">
+  <div class="mouse-glow" id="cursor-glow"></div>
+  <site-header></site-header>
+  <main class="relative">
+    <!-- Atmospheric Background Elements -->
+    <div class="fixed inset-0 architecture-grid opacity-20 pointer-events-none"></div>
+    <div class="fixed inset-0 pointer-events-none overflow-hidden" id="stream-container"></div>
+    <div class="floating-orb w-[600px] h-[600px] bg-primary top-[-10%] right-[-10%]" id="orb-1"></div>
+    <div class="floating-orb w-[500px] h-[500px] bg-secondary bottom-[-10%] left-[-10%]" id="orb-2"></div>
+    <!-- Section 1: Hero -->
+    <section
+      class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-48 pb-32 min-h-screen flex items-center">
+      <div class="max-w-4xl">
+        <div class="flex flex-wrap gap-3 mb-8 reveal-up">
+          <span
+            class="badge-hover px-3 py-1 rounded-full border border-secondary/30 bg-secondary/10 text-secondary font-label-md text-xs uppercase tracking-widest flex items-center gap-2 cursor-default">
+            <span class="material-symbols-outlined text-[14px]">military_tech</span>
+            11+ Years Experience
+          </span>
+          <span
+            class="badge-hover px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-md text-xs uppercase tracking-widest cursor-default">Enterprise
+            Systems</span>
+          <span
+            class="badge-hover px-3 py-1 rounded-full border border-tertiary/30 bg-tertiary/10 text-tertiary font-label-md text-xs uppercase tracking-widest cursor-default">Engineering
+            Leadership</span>
+          <span
+            class="badge-hover px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary font-label-md text-xs uppercase tracking-widest cursor-default">MSc
+            Researcher</span>
+        </div>
+        <h1
+          class="font-display-lg text-headline-lg-mobile text-[46px] md:text-display-lg text-on-surface mb-8 leading-tight tracking-tighter reveal-up">
+          Building
+          <span class="text-secondary breath-glow">Software Businesses</span>,
+          Engineering Teams, and Technology Infrastructure That Scale.
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl reveal-up">
+          Fractional CTO, Technical Founder Partner, and SaaS Architect
+          delivering clarity in complexity. Transforming ambitious business
+          operations into resilient, high-performance digital platforms.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 reveal-up">
+          <a href="contact"
+            class="px-8 py-4 bg-primary text-on-primary font-label-md text-lg font-bold rounded-xl glow-hover pulse-primary transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap w-max">
+            Book CTO Consultation
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+          <button
+            class="px-8 py-4 glass-card text-primary font-label-md text-lg font-bold rounded-xl glow-hover transition-all duration-300 whitespace-nowrap w-max">
+            Explore Case Studies
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2: Strategic Authority (About Integration) -->
+    <section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div class="reveal-up">
+          <h2 class="font-label-md text-secondary uppercase tracking-[0.3em] mb-4">
+            The Strategic Partner
+          </h2>
+          <h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8">
+            Strategic Authority for Modern Enterprises
+          </h3>
+          <p class="font-body-lg text-on-surface-variant mb-8">
+            Bridging the gap between ambitious business vision and bulletproof
+            technical execution. My approach combines decadal industry
+            experience with academic rigor in AI and Distributed Systems.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined">groups</span>
+                <span class="font-bold">Engineering Leadership</span>
+              </div>
+              <p class="text-sm text-on-surface-variant">
+                Building high-performance cultures and mentorship frameworks.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-secondary">
+                <span class="material-symbols-outlined">architecture</span>
+                <span class="font-bold">Enterprise Delivery</span>
+              </div>
+              <p class="text-sm text-on-surface-variant">
+                Architecting systems that handle millions of requests
+                reliably.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-tertiary">
+                <span class="material-symbols-outlined">cycle</span>
+                <span class="font-bold">Lifecycle Ownership</span>
+              </div>
+              <p class="text-sm text-on-surface-variant">
+                End-to-end technical strategy from MVP to Global Scale.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-primary-fixed-dim">
+                <span class="material-symbols-outlined">school</span>
+                <span class="font-bold">Academic Credibility</span>
+              </div>
+              <p class="text-sm text-on-surface-variant">
+                MSc Research in AI and Scalable Architectures.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative reveal-up">
+          <div class="aspect-square glass-card rounded-3xl overflow-hidden relative group">
+            <img alt="Technical Infrastructure Visualization"
+              class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+              src="/images/img_4.webp" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+            <div class="absolute bottom-8 left-8 right-8">
+              <div class="p-4 glass-card rounded-xl">
+                <div class="text-xs text-secondary-fixed uppercase tracking-widest mb-1">
+                  Active Research
+                </div>
+                <div class="text-on-surface font-bold">
+                  Optimizing Neural Net Architectures for Real-time Edge
+                  Computing
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3: Impact in Numbers -->
+    <section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-24">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter reveal-up">
+        <div class="glass-card p-8 rounded-2xl text-center group hover:border-secondary/40 transition-all">
+          <div class="text-secondary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">
+            11+
+          </div>
+          <div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">
+            Years Professional Exp
+          </div>
+        </div>
+        <div class="glass-card p-8 rounded-2xl text-center group hover:border-primary/40 transition-all">
+          <div class="text-primary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">
+            50+
+          </div>
+          <div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">
+            Global Projects Delivered
+          </div>
+        </div>
+        <div class="glass-card p-8 rounded-2xl text-center group hover:border-tertiary/40 transition-all">
+          <div class="text-tertiary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">
+            $100M
+          </div>
+          <div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">
+            Value Architected
+          </div>
+        </div>
+        <div class="glass-card p-8 rounded-2xl text-center group hover:border-secondary/40 transition-all">
+          <div class="text-secondary font-display-lg text-4xl md:text-5xl mb-2 breath-glow">
+            99.9%
+          </div>
+          <div class="text-on-surface-variant font-label-md uppercase tracking-wider text-xs">
+            System Uptime Record
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 4: Strategic Offerings -->
+    <section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal-up">
+        <div class="max-w-2xl">
+          <h2 class="font-label-md text-primary uppercase tracking-[0.3em] mb-4">
+            Core Expertise
+          </h2>
+          <h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">
+            Comprehensive Technology Leadership Services
+          </h3>
+        </div>
+        <a class="text-primary font-label-md flex items-center gap-2 hover:underline" href="services.html">
+          View All Services
+          <span class="material-symbols-outlined">arrow_outward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter reveal-up">
+        <div class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all">
+          <span class="material-symbols-outlined text-4xl text-secondary mb-6">psychology</span>
+          <h4 class="font-headline-md text-xl mb-4">Fractional CTO</h4>
+          <p class="text-on-surface-variant mb-8">
+            Strategic technology leadership and roadmapping for startups and
+            scaling enterprises without the full-time overhead.
+          </p>
+          <ul class="space-y-3 mb-8 text-sm text-on-surface/80">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Tech
+              Stack Audits
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Hiring &amp; Team Building
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Technical Due Diligence
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all">
+          <span class="material-symbols-outlined text-4xl text-primary mb-6">hub</span>
+          <h4 class="font-headline-md text-xl mb-4">SaaS Architecture</h4>
+          <p class="text-on-surface-variant mb-8">
+            Designing multi-tenant, cloud-native platforms that prioritize
+            security, observability, and cost-efficient scaling.
+          </p>
+          <ul class="space-y-3 mb-8 text-sm text-on-surface/80">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Microservices Design
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Cloud
+              Migration
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> API
+              Infrastructure
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card p-10 rounded-2xl group hover:bg-surface-container transition-all">
+          <span class="material-symbols-outlined text-4xl text-tertiary mb-6">auto_awesome</span>
+          <h4 class="font-headline-md text-xl mb-4">AI &amp; Automation</h4>
+          <p class="text-on-surface-variant mb-8">
+            Integrating Generative AI and ML workflows to eliminate
+            operational bottlenecks and create new product value.
+          </p>
+          <ul class="space-y-3 mb-8 text-sm text-on-surface/80">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> LLM
+              Implementation
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Workflow Automation
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Predictive Analytics
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Section 5: Recent Case Studies -->
+    <section class="relative z-10 py-section-gap bg-surface-container-low/30 overflow-hidden">
+      <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="mb-16 reveal-up">
+          <h2 class="font-label-md text-secondary uppercase tracking-[0.3em] mb-4">
+            Proof of Execution
+          </h2>
+          <h3 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">
+            Recent Strategic Impact
+          </h3>
+        </div>
+        <div class="flex gap-gutter overflow-x-auto pb-12 custom-scrollbar reveal-up" id="case-studies-scroll">
+          <div class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group">
+            <div class="aspect-video relative overflow-hidden">
+              <img alt="Enterprise Platform Modernization"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="/images/img_5.webp" />
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+            </div>
+            <div class="p-8">
+              <div class="text-secondary font-label-md text-xs mb-2">
+                ENTERPRISE SAAS
+              </div>
+              <h4 class="font-headline-md text-xl mb-4">
+                Platform Modernization &amp; Scalability Audit
+              </h4>
+              <p class="text-on-surface-variant text-sm mb-6">
+                Transitioned a legacy monolithic HR platform to a distributed
+                microservices architecture, reducing latency by 60% and
+                infrastructure costs by 40%.
+              </p>
+              <a class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all"
+                href="case-studies.html">Read Case Study
+                <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+          <div class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group">
+            <div class="aspect-video relative overflow-hidden">
+              <img alt="AI Integration"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="/images/img_6.webp" />
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+            </div>
+            <div class="p-8">
+              <div class="text-tertiary font-label-md text-xs mb-2">
+                AI &amp; AUTOMATION
+              </div>
+              <h4 class="font-headline-md text-xl mb-4">
+                Generative AI Customer Support Engine
+              </h4>
+              <p class="text-on-surface-variant text-sm mb-6">
+                Designed and deployed a RAG-based AI support assistant for a
+                FinTech startup, handling 85% of tier-1 queries with 92%
+                customer satisfaction.
+              </p>
+              <a class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all"
+                href="case-studies.html">Read Case Study
+                <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+          <div class="min-w-[320px] md:min-w-[500px] glass-card rounded-2xl overflow-hidden group">
+            <div class="aspect-video relative overflow-hidden">
+              <img alt="E-commerce Architecture"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="/images/img_7.webp" />
+              <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+            </div>
+            <div class="p-8">
+              <div class="text-primary font-label-md text-xs mb-2">
+                HIGH-TRAFFIC WEB
+              </div>
+              <h4 class="font-headline-md text-xl mb-4">
+                Scalable E-commerce Infrastructure
+              </h4>
+              <p class="text-on-surface-variant text-sm mb-6">
+                Architected a headless commerce solution capable of handling
+                50k concurrent users during peak flash-sale events without
+                performance degradation.
+              </p>
+              <a class="inline-flex items-center gap-2 text-primary font-label-md text-sm group-hover:gap-3 transition-all"
+                href="case-studies.html">Read Case Study
+                <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Final CTA Section -->
+    <section
+      class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-section-gap text-center">
+      <div class="glass-card p-12 md:p-20 rounded-[3rem] reveal-up overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 -z-10"></div>
+        <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-8">
+          Ready to Scale Your Technical Vision?
+        </h2>
+        <p class="font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+          Whether you need a Fractional CTO to lead your engineering team or a
+          Lead Architect to build your next-gen SaaS platform, let's discuss
+          how we can drive results.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button
+            class="px-10 py-5 bg-primary text-on-primary font-label-md text-lg font-bold rounded-2xl glow-hover transition-all">
+            Schedule Strategy Call
+          </button>
+          <button
+            class="px-10 py-5 glass-card text-on-surface font-label-md text-lg font-bold rounded-2xl glow-hover transition-all">
+            Download Services Guide
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <site-footer></site-footer>
+
+  <script src="js/components/Header.js"></script>
+  <script src="js/components/Footer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

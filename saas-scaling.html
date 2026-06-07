@@ -1,119 +1,128 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Case Study: Scaling Multi-Tenant SaaS | Muhammad Ahsan Ali</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed-dim": "#ddb7ff",
-                    "on-surface": "#dce1fb",
-                    "surface-dim": "#0c1324",
-                    "secondary": "#4cd7f6",
-                    "on-tertiary-fixed": "#2c0051",
-                    "on-tertiary": "#490080",
-                    "inverse-on-surface": "#2a3043",
-                    "surface-container-low": "#151b2d",
-                    "on-surface-variant": "#c2c6d6",
-                    "primary": "#adc6ff",
-                    "error-container": "#93000a",
-                    "secondary-fixed": "#acedff",
-                    "primary-container": "#4d8eff",
-                    "secondary-fixed-dim": "#4cd7f6",
-                    "outline-variant": "#424754",
-                    "surface-tint": "#adc6ff",
-                    "on-background": "#dce1fb",
-                    "surface-container-lowest": "#070d1f",
-                    "surface-bright": "#33394c",
-                    "on-primary": "#002e6a",
-                    "error": "#ffb4ab",
-                    "tertiary-fixed": "#f0dbff",
-                    "on-error-container": "#ffdad6",
-                    "primary-fixed": "#d8e2ff",
-                    "on-primary-fixed-variant": "#004395",
-                    "tertiary-container": "#b76dff",
-                    "on-secondary-fixed-variant": "#004e5c",
-                    "on-secondary-fixed": "#001f26",
-                    "on-secondary-container": "#00424e",
-                    "surface-container": "#191f31",
-                    "outline": "#8c909f",
-                    "on-error": "#690005",
-                    "surface-container-high": "#23293c",
-                    "on-tertiary-container": "#400071",
-                    "on-secondary": "#003640",
-                    "primary-fixed-dim": "#adc6ff",
-                    "tertiary": "#ddb7ff",
-                    "surface": "#0c1324",
-                    "secondary-container": "#03b5d3",
-                    "on-primary-container": "#00285d",
-                    "background": "#0c1324",
-                    "surface-container-highest": "#2e3447",
-                    "inverse-primary": "#005ac2",
-                    "surface-variant": "#2e3447",
-                    "on-tertiary-fixed-variant": "#6900b3",
-                    "on-primary-fixed": "#001a42",
-                    "inverse-surface": "#dce1fb"
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Study: Scaling Multi-Tenant SaaS | Muhammad Ahsan Ali</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ddb7ff",
+                        "on-surface": "#dce1fb",
+                        "surface-dim": "#0c1324",
+                        "secondary": "#4cd7f6",
+                        "on-tertiary-fixed": "#2c0051",
+                        "on-tertiary": "#490080",
+                        "inverse-on-surface": "#2a3043",
+                        "surface-container-low": "#151b2d",
+                        "on-surface-variant": "#c2c6d6",
+                        "primary": "#adc6ff",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#acedff",
+                        "primary-container": "#4d8eff",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "outline-variant": "#424754",
+                        "surface-tint": "#adc6ff",
+                        "on-background": "#dce1fb",
+                        "surface-container-lowest": "#070d1f",
+                        "surface-bright": "#33394c",
+                        "on-primary": "#002e6a",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#f0dbff",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#d8e2ff",
+                        "on-primary-fixed-variant": "#004395",
+                        "tertiary-container": "#b76dff",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-secondary-fixed": "#001f26",
+                        "on-secondary-container": "#00424e",
+                        "surface-container": "#191f31",
+                        "outline": "#8c909f",
+                        "on-error": "#690005",
+                        "surface-container-high": "#23293c",
+                        "on-tertiary-container": "#400071",
+                        "on-secondary": "#003640",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary": "#ddb7ff",
+                        "surface": "#0c1324",
+                        "secondary-container": "#03b5d3",
+                        "on-primary-container": "#00285d",
+                        "background": "#0c1324",
+                        "surface-container-highest": "#2e3447",
+                        "inverse-primary": "#005ac2",
+                        "surface-variant": "#2e3447",
+                        "on-tertiary-fixed-variant": "#6900b3",
+                        "on-primary-fixed": "#001a42",
+                        "inverse-surface": "#dce1fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "label-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "code-sm": ["geist"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "code-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "base": "8px",
-                    "margin-mobile": "16px",
-                    "gutter": "24px",
-                    "container-max": "1280px",
-                    "section-gap": "120px",
-                    "margin-desktop": "64px"
-            },
-            "fontFamily": {
-                    "headline-md": ["Geist"],
-                    "label-md": ["Geist"],
-                    "headline-lg": ["Geist"],
-                    "display-lg": ["Geist"],
-                    "body-lg": ["Inter"],
-                    "code-sm": ["geist"],
-                    "body-md": ["Inter"],
-                    "headline-lg-mobile": ["Geist"]
-            },
-            "fontSize": {
-                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600"}],
-                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
-                    "code-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         body {
             background-color: #0c1324;
             color: #dce1fb;
             overflow-x: hidden;
         }
+
         .glass-card {
             background: rgba(2, 6, 23, 0.6);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(173, 198, 255, 0.1);
         }
+
         .glow-hover:hover {
             border-color: rgba(76, 215, 246, 0.4);
             box-shadow: 0 0 20px rgba(76, 215, 246, 0.1);
         }
+
         .atmospheric-orb {
             position: fixed;
             width: 600px;
@@ -123,20 +132,24 @@
             z-index: -1;
             opacity: 0.15;
         }
+
         .grid-pattern {
             background-image: radial-gradient(rgba(173, 198, 255, 0.1) 1px, transparent 1px);
             background-size: 32px 32px;
         }
+
         .chart-path-legacy {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation: dash 3s ease-out forwards;
         }
+
         .chart-path-new {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation: dash 3s ease-out forwards 0.5s;
         }
+
         @keyframes dash {
             to {
                 stroke-dashoffset: 0;
@@ -144,263 +157,318 @@
         }
     </style>
 </head>
+
 <body class="font-body-md text-body-md selection:bg-secondary/30">
-<!-- Atmospheric Background Elements -->
-<div class="atmospheric-orb bg-primary top-[-200px] left-[-200px]"></div>
-<div class="atmospheric-orb bg-secondary bottom-[-200px] right-[-200px]"></div>
-<div class="fixed inset-0 grid-pattern opacity-30 pointer-events-none"></div>
-<!-- TopNavBar -->
-<header class="w-full sticky top-0 z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-none">
-<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-20">
-<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">
-            Muhammad Ahsan Ali
-        </div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
-<a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold border-b-2 border-primary pb-1" href="#">Case Studies</a>
-<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#">Research</a>
-<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#">Mentorship</a>
-<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:opacity-80 active:scale-95 transition-all">
-                Book Strategy Call
-            </button>
-</div>
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</nav>
-</header>
-<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<!-- Hero Section -->
-<section class="pt-section-gap pb-20">
-<div class="max-w-4xl">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-secondary/30 bg-secondary/10 text-secondary mb-6">
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
-<span class="font-label-md text-[12px] uppercase tracking-[0.2em]">Scale Engineering</span>
-</div>
-<h1 class="font-headline-lg text-headline-lg md:text-display-lg md:font-display-lg text-on-surface mb-8 leading-tight">
-                Scaling a Multi-Tenant SaaS Platform for <span class="text-secondary">Hyper-Growth</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                How we stabilized a market leader's infrastructure during a 10x traffic surge, optimizing AWS overhead and implementing enterprise-grade isolation strategies.
-            </p>
-</div>
-</section>
-<!-- Key Outcomes Grid -->
-<section class="pb-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<div class="glass-card p-8 rounded-xl border-l-4 border-l-secondary">
-<div class="text-on-surface-variant font-label-md uppercase mb-2">Uptime Reliability</div>
-<div class="font-headline-md text-secondary">99.99%</div>
-<div class="mt-4 font-body-md text-on-surface-variant/80">Stabilized during peak loads.</div>
-</div>
-<div class="glass-card p-8 rounded-xl border-l-4 border-l-primary">
-<div class="text-on-surface-variant font-label-md uppercase mb-2">Latency Reduction</div>
-<div class="font-headline-md text-primary">45%</div>
-<div class="mt-4 font-body-md text-on-surface-variant/80">Average request-response time.</div>
-</div>
-<div class="glass-card p-8 rounded-xl border-l-4 border-l-tertiary">
-<div class="text-on-surface-variant font-label-md uppercase mb-2">Cost Optimization</div>
-<div class="font-headline-md text-tertiary">30%</div>
-<div class="mt-4 font-body-md text-on-surface-variant/80">Reduction in monthly cloud spend.</div>
-</div>
-</section>
-<!-- Scaling Challenges -->
-<section class="pb-section-gap">
-<h2 class="font-headline-md text-headline-md text-on-surface mb-12 flex items-center gap-4">
-<span class="w-12 h-[1px] bg-outline-variant"></span>
-            Scaling Challenges
-        </h2>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Challenge 1 -->
-<div class="md:col-span-7 glass-card p-10 rounded-xl overflow-hidden relative group">
-<div class="relative z-10">
-<span class="material-symbols-outlined text-secondary mb-4 text-4xl">group_remove</span>
-<h3 class="font-headline-md text-on-surface mb-4">Noisy Neighbor Paradox</h3>
-<p class="text-on-surface-variant font-body-md max-w-md mb-8">
-                        High-volume enterprise tenants were consuming disproportionate shared resources, leading to cascading failures and degraded performance for small-to-medium business tiers.
-                    </p>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant rounded-full font-label-md text-[11px] text-on-surface-variant">RESOURCE CONTENTION</span>
-<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant rounded-full font-label-md text-[11px] text-on-surface-variant">TENANT ISOLATION</span>
-</div>
-</div>
-<div class="absolute right-[-10%] top-[-10%] w-64 h-64 bg-secondary/5 blur-[80px] rounded-full group-hover:bg-secondary/10 transition-all duration-500"></div>
-</div>
-<!-- Challenge 2 -->
-<div class="md:col-span-5 glass-card p-10 rounded-xl bg-gradient-to-br from-surface-container-low to-surface">
-<span class="material-symbols-outlined text-primary mb-4 text-4xl">account_balance_wallet</span>
-<h3 class="font-headline-md text-on-surface mb-4">AWS Cost Spirals</h3>
-<p class="text-on-surface-variant font-body-md mb-6">
-                    Infrastructure costs were growing linearly with user acquisition, threatening margins and preventing sustainable aggressive scaling.
-                </p>
-<div class="mt-auto pt-8 border-t border-white/5">
-<div class="flex justify-between items-center text-on-surface-variant font-label-md mb-2">
-<span>Cost Efficiency</span>
-<span>Critical Low</span>
-</div>
-<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
-<div class="bg-error w-[85%] h-full"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Visual Intervention Section: Traffic Chart -->
-<section class="pb-section-gap">
-<div class="glass-card rounded-2xl p-6 md:p-10 border border-primary/20 relative overflow-hidden">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div>
-<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Traffic Distribution Strategy</h2>
-<p class="text-on-surface-variant font-body-md mb-8">
-                        Our intervention focused on offloading read-heavy operations to an intelligent edge-caching layer while sharding the primary relational database to ensure high-velocity write availability.
-                    </p>
-<div class="space-y-6">
-<div class="flex gap-4">
-<div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary shrink-0">
-<span class="material-symbols-outlined">layers</span>
-</div>
-<div>
-<div class="font-label-md text-on-surface">Edge Caching Layer</div>
-<div class="text-body-md text-on-surface-variant text-sm">Reducing origin load by 72% via CloudFront &amp; custom Lambda@Edge rules.</div>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
-<span class="material-symbols-outlined">database</span>
-</div>
-<div>
-<div class="font-label-md text-on-surface">Database Sharding</div>
-<div class="text-body-md text-on-surface-variant text-sm">Horizontal partitioning by tenant ID to eliminate single-point-of-failure bottlenecks.</div>
-</div>
-</div>
-</div>
-</div>
-<div class="relative bg-surface-container-lowest rounded-xl p-8 border border-white/5 h-[320px] w-full flex flex-col justify-between overflow-hidden">
-<!-- Legend -->
-<div class="flex justify-end gap-6 mb-4">
-<div class="flex items-center gap-2 text-[10px] font-label-md tracking-wider text-on-surface-variant">
-<span class="w-2 h-2 rounded-full bg-secondary"></span> LEGACY ARCH
-                        </div>
-<div class="flex items-center gap-2 text-[10px] font-label-md tracking-wider text-on-surface-variant">
-<span class="w-2 h-2 rounded-full bg-primary"></span> NEW SCALE ARCH
-                        </div>
-</div>
-<!-- SVG Graph -->
-<div class="flex-grow relative">
-<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 100">
-<!-- Grid Lines -->
-<line opacity="0.1" stroke="white" stroke-width="0.1" x1="0" x2="100" y1="20" y2="20"></line>
-<line opacity="0.1" stroke="white" stroke-width="0.1" x1="0" x2="100" y1="50" y2="50"></line>
-<line opacity="0.1" stroke="white" stroke-width="0.1" x1="0" x2="100" y1="80" y2="80"></line>
-<!-- Legacy Path (Declining) -->
-<path class="chart-path-legacy" d="M 0 30 C 20 30, 40 40, 60 70 S 100 85, 100 90" fill="none" stroke="#4cd7f6" stroke-width="2"></path>
-<!-- New Arch Path (Growing) -->
-<path class="chart-path-new" d="M 0 85 L 20 82 C 40 80, 60 20, 80 15 L 100 10" fill="none" stroke="#adc6ff" stroke-width="2.5"></path>
-</svg>
-</div>
-<!-- X-Axis Labels -->
-<div class="flex justify-between items-center mt-6 pt-2 border-t border-white/5">
-<span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">JAN</span>
-<span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">FEB</span>
-<span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">MAR</span>
-<span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">APR</span>
-<span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">MAY</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Deep Dive: Technical Implementation -->
-<section class="pb-section-gap">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-<div>
-<h2 class="font-headline-md text-headline-md text-on-surface mb-6">The Intervention</h2>
-<p class="text-on-surface-variant font-body-md mb-6">
-                    Transformation didn't happen overnight. It was a surgical operation on a live, high-traffic system. We utilized a "Strangler Fig" pattern to migrate services without downtime.
-                </p>
-<ul class="space-y-4">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="text-on-surface-variant">Migration of 40TB PostgreSQL data to a sharded Aurora cluster.</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="text-on-surface-variant">Implementation of Redis-based rate limiting per tenant.</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="text-on-surface-variant">Infrastructure as Code (Terraform) to modularize environment creation.</span>
-</li>
-</ul>
-</div>
-<div class="rounded-2xl overflow-hidden border border-outline-variant h-full min-h-[400px] relative">
-<img alt="Technical Infrastructure" class="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7BUGlx4hOghrEeE0vLh3iek3L-gSSoaOUh-U-LKE9ZReUWn2DXoxFSVVq8WMZddkvXcbw63zJ0JcqkuUDb_ikQYhtKyHOX2vldC_bGlTMdJ8is6jO7NMMGIJHnfYZaDx2FlUNPqTFwQYYrX0mS0HeqMb5bkuhR3NSg6IF4b9y0twNC6xIoDCZB5FWxnwvRlrt4hVeSXi0kPah1ayW3zq6DIT7d_iGIuUCFgJ76gNos-9LYuK7F6LyGKNB8neFEdcXS7qUzJRKUohr"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-<div class="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-lg">
-<span class="font-code-sm text-[12px] text-secondary">ARCH_VERSION_4.2.0-STABLE</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Final Outcomes CTA -->
-<section class="pb-section-gap">
-<div class="glass-card p-12 md:p-20 rounded-3xl text-center relative overflow-hidden">
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-full bg-[radial-gradient(circle_at_50%_0%,rgba(173,198,255,0.1),transparent_50%)] pointer-events-none"></div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">Need to Future-Proof Your Infrastructure?</h2>
-<p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-12">
-                I provide fractional CTO services and architectural audits for high-growth ventures facing scaling bottlenecks. Let's ensure your technology is an accelerator, not a constraint.
-            </p>
-<div class="flex flex-col md:flex-row justify-center gap-6">
-<button class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-label-md hover:brightness-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(76,215,246,0.2)]">
+    <!-- Atmospheric Background Elements -->
+    <div class="atmospheric-orb bg-primary top-[-200px] left-[-200px]"></div>
+    <div class="atmospheric-orb bg-secondary bottom-[-200px] right-[-200px]"></div>
+    <div class="fixed inset-0 grid-pattern opacity-30 pointer-events-none"></div>
+    <!-- TopNavBar -->
+    <header class="w-full sticky top-0 z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-none">
+        <nav
+            class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+            <div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">
+                Muhammad Ahsan Ali
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Services</a>
+                <a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold border-b-2 border-primary pb-1"
+                    href="#">Case Studies</a>
+                <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Research</a>
+                <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Mentorship</a>
+                <button
+                    class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:opacity-80 active:scale-95 transition-all">
                     Book Strategy Call
                 </button>
-<button class="border border-outline text-on-surface px-10 py-4 rounded-full font-label-md backdrop-blur-sm hover:bg-white/5 active:scale-95 transition-all">
-                    View More Studies
-                </button>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full pt-section-gap pb-base bg-surface-container-lowest border-t border-white/5">
-<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
-<div class="font-headline-md text-headline-md font-bold text-on-surface">
-            MAA.
+            </div>
+            <button class="md:hidden text-on-surface">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <!-- Hero Section -->
+        <section class="pt-section-gap pb-20">
+            <div class="max-w-4xl">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-secondary/30 bg-secondary/10 text-secondary mb-6">
+                    <span class="material-symbols-outlined text-[16px]"
+                        style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    <span class="font-label-md text-[12px] uppercase tracking-[0.2em]">Scale Engineering</span>
+                </div>
+                <h1
+                    class="font-headline-lg text-headline-lg md:text-display-lg md:font-display-lg text-on-surface mb-8 leading-tight">
+                    Scaling a Multi-Tenant SaaS Platform for <span class="text-secondary">Hyper-Growth</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    How we stabilized a market leader's infrastructure during a 10x traffic surge, optimizing AWS
+                    overhead and implementing enterprise-grade isolation strategies.
+                </p>
+            </div>
+        </section>
+        <!-- Key Outcomes Grid -->
+        <section class="pb-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div class="glass-card p-8 rounded-xl border-l-4 border-l-secondary">
+                <div class="text-on-surface-variant font-label-md uppercase mb-2">Uptime Reliability</div>
+                <div class="font-headline-md text-secondary">99.99%</div>
+                <div class="mt-4 font-body-md text-on-surface-variant/80">Stabilized during peak loads.</div>
+            </div>
+            <div class="glass-card p-8 rounded-xl border-l-4 border-l-primary">
+                <div class="text-on-surface-variant font-label-md uppercase mb-2">Latency Reduction</div>
+                <div class="font-headline-md text-primary">45%</div>
+                <div class="mt-4 font-body-md text-on-surface-variant/80">Average request-response time.</div>
+            </div>
+            <div class="glass-card p-8 rounded-xl border-l-4 border-l-tertiary">
+                <div class="text-on-surface-variant font-label-md uppercase mb-2">Cost Optimization</div>
+                <div class="font-headline-md text-tertiary">30%</div>
+                <div class="mt-4 font-body-md text-on-surface-variant/80">Reduction in monthly cloud spend.</div>
+            </div>
+        </section>
+        <!-- Scaling Challenges -->
+        <section class="pb-section-gap">
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-12">
+                Scaling Challenges
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <!-- Challenge 1 -->
+                <div class="md:col-span-7 glass-card p-10 rounded-xl overflow-hidden relative group">
+                    <div class="relative z-10">
+                        <span class="material-symbols-outlined text-secondary mb-4 text-4xl">group_remove</span>
+                        <h3 class="font-headline-md text-on-surface mb-4">Noisy Neighbor Paradox</h3>
+                        <p class="text-on-surface-variant font-body-md max-w-md mb-8">
+                            High-volume enterprise tenants were consuming disproportionate shared resources, leading to
+                            cascading failures and degraded performance for small-to-medium business tiers.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-surface-container-highest border border-outline-variant rounded-full font-label-md text-[11px] text-on-surface-variant">RESOURCE
+                                CONTENTION</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container-highest border border-outline-variant rounded-full font-label-md text-[11px] text-on-surface-variant">TENANT
+                                ISOLATION</span>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute right-[-10%] top-[-10%] w-64 h-64 bg-secondary/5 blur-[80px] rounded-full group-hover:bg-secondary/10 transition-all duration-500">
+                    </div>
+                </div>
+                <!-- Challenge 2 -->
+                <div
+                    class="md:col-span-5 glass-card p-10 rounded-xl bg-gradient-to-br from-surface-container-low to-surface">
+                    <span class="material-symbols-outlined text-primary mb-4 text-4xl">account_balance_wallet</span>
+                    <h3 class="font-headline-md text-on-surface mb-4">AWS Cost Spirals</h3>
+                    <p class="text-on-surface-variant font-body-md mb-6">
+                        Infrastructure costs were growing linearly with user acquisition, threatening margins and
+                        preventing sustainable aggressive scaling.
+                    </p>
+                    <div class="mt-auto pt-8 border-t border-white/5">
+                        <div class="flex justify-between items-center text-on-surface-variant font-label-md mb-2">
+                            <span>Cost Efficiency</span>
+                            <span>Critical Low</span>
+                        </div>
+                        <div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+                            <div class="bg-error w-[85%] h-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Visual Intervention Section: Traffic Chart -->
+        <section class="pb-section-gap">
+            <div class="glass-card rounded-2xl p-6 md:p-10 border border-primary/20 relative overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-6">Traffic Distribution Strategy
+                        </h2>
+                        <p class="text-on-surface-variant font-body-md mb-8">
+                            Our intervention focused on offloading read-heavy operations to an intelligent edge-caching
+                            layer while sharding the primary relational database to ensure high-velocity write
+                            availability.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary shrink-0">
+                                    <span class="material-symbols-outlined">layers</span>
+                                </div>
+                                <div>
+                                    <div class="font-label-md text-on-surface">Edge Caching Layer</div>
+                                    <div class="text-body-md text-on-surface-variant text-sm">Reducing origin load by
+                                        72% via CloudFront &amp; custom Lambda@Edge rules.</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                                    <span class="material-symbols-outlined">database</span>
+                                </div>
+                                <div>
+                                    <div class="font-label-md text-on-surface">Database Sharding</div>
+                                    <div class="text-body-md text-on-surface-variant text-sm">Horizontal partitioning by
+                                        tenant ID to eliminate single-point-of-failure bottlenecks.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative bg-surface-container-lowest rounded-xl p-8 border border-white/5 h-[320px] w-full flex flex-col justify-between overflow-hidden">
+                        <!-- Legend -->
+                        <div class="flex justify-end gap-6 mb-4">
+                            <div
+                                class="flex items-center gap-2 text-[10px] font-label-md tracking-wider text-on-surface-variant">
+                                <span class="w-2 h-2 rounded-full bg-secondary"></span> LEGACY ARCH
+                            </div>
+                            <div
+                                class="flex items-center gap-2 text-[10px] font-label-md tracking-wider text-on-surface-variant">
+                                <span class="w-2 h-2 rounded-full bg-primary"></span> NEW SCALE ARCH
+                            </div>
+                        </div>
+                        <!-- SVG Graph -->
+                        <div class="flex-grow relative">
+                            <svg class="w-full h-full overflow-visible" preserveaspectratio="none"
+                                viewbox="0 0 100 100">
+                                <!-- Grid Lines -->
+                                <line opacity="0.1" stroke="white" stroke-width="0.1" x1="0" x2="100" y1="20" y2="20">
+                                </line>
+                                <line opacity="0.1" stroke="white" stroke-width="0.1" x1="0" x2="100" y1="50" y2="50">
+                                </line>
+                                <line opacity="0.1" stroke="white" stroke-width="0.1" x1="0" x2="100" y1="80" y2="80">
+                                </line>
+                                <!-- Legacy Path (Declining) -->
+                                <path class="chart-path-legacy" d="M 0 30 C 20 30, 40 40, 60 70 S 100 85, 100 90"
+                                    fill="none" stroke="#4cd7f6" stroke-width="2"></path>
+                                <!-- New Arch Path (Growing) -->
+                                <path class="chart-path-new" d="M 0 85 L 20 82 C 40 80, 60 20, 80 15 L 100 10"
+                                    fill="none" stroke="#adc6ff" stroke-width="2.5"></path>
+                            </svg>
+                        </div>
+                        <!-- X-Axis Labels -->
+                        <div class="flex justify-between items-center mt-6 pt-2 border-t border-white/5">
+                            <span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">JAN</span>
+                            <span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">FEB</span>
+                            <span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">MAR</span>
+                            <span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">APR</span>
+                            <span class="text-[10px] text-on-surface-variant font-code-sm w-1/5 text-center">MAY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Deep Dive: Technical Implementation -->
+        <section class="pb-section-gap">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-on-surface mb-6">The Intervention</h2>
+                    <p class="text-on-surface-variant font-body-md mb-6">
+                        Transformation didn't happen overnight. It was a surgical operation on a live, high-traffic
+                        system. We utilized a "Strangler Fig" pattern to migrate services without downtime.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-on-surface-variant">Migration of 40TB PostgreSQL data to a sharded Aurora
+                                cluster.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-on-surface-variant">Implementation of Redis-based rate limiting per
+                                tenant.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-on-surface-variant">Infrastructure as Code (Terraform) to modularize
+                                environment creation.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-outline-variant h-full min-h-[400px] relative">
+                    <img alt="Technical Infrastructure"
+                        class="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        src="/images/img_19.webp" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-lg">
+                        <span class="font-code-sm text-[12px] text-secondary">ARCH_VERSION_4.2.0-STABLE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final Outcomes CTA -->
+        <section class="pb-section-gap">
+            <div class="glass-card p-6 md:p-12 rounded-3xl text-center relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-full bg-[radial-gradient(circle_at_50%_0%,rgba(173,198,255,0.1),transparent_50%)] pointer-events-none">
+                </div>
+                <h2
+                    class="font-headline-lg text-[30px] font-[800] md:text-headline-lg text-on-surface mb-8 text-balance text-center break-words max-w-full w-full">
+                    Need to Future‑Proof Your Infrastructure?</h2>
+                <p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-12">
+                    I provide fractional CTO services and architectural audits for high-growth ventures facing scaling
+                    bottlenecks. Let's ensure your technology is an accelerator, not a constraint.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <button
+                        class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-label-md hover:brightness-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(76,215,246,0.2)]">
+                        Book Strategy Call
+                    </button>
+                    <button
+                        class="border border-outline text-on-surface px-10 py-4 rounded-full font-label-md backdrop-blur-sm hover:bg-white/5 active:scale-95 transition-all">
+                        View More Studies
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full pt-section-gap pb-base bg-surface-container-lowest border-t border-white/5">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface">
+                MAA.
+            </div>
+            <div class="text-on-surface-variant font-body-md text-center md:text-left">
+                © 2024 Muhammad Ahsan Ali. Technical Leadership for High-Growth Ventures.
+            </div>
+            <div class="flex gap-8">
+                <a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    href="#">LinkedIn</a>
+                <a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    href="#">GitHub</a>
+                <a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    href="#">Medium</a>
+                <a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    href="#">Contact</a>
+            </div>
         </div>
-<div class="text-on-surface-variant font-body-md text-center md:text-left">
-            © 2024 Muhammad Ahsan Ali. Technical Leadership for High-Growth Ventures.
-        </div>
-<div class="flex gap-8">
-<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary" href="#">LinkedIn</a>
-<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary" href="#">GitHub</a>
-<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary" href="#">Medium</a>
-<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors font-body-md focus:outline-none focus:ring-2 focus:ring-primary" href="#">Contact</a>
-</div>
-</div>
-</footer>
-<script>
-    // Subtle micro-interaction: update cursor shadow or atmospheric light
-    document.addEventListener('mousemove', (e) => {
-        const orbs = document.querySelectorAll('.atmospheric-orb');
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        
-        orbs[0].style.transform = `translate(${x * 30}px, ${y * 30}px)`;
-        orbs[1].style.transform = `translate(${-x * 30}px, ${-y * 30}px)`;
-    });
+    </footer>
+    <script>
+        // Subtle micro-interaction: update cursor shadow or atmospheric light
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.atmospheric-orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
 
-    // Simple scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-10');
-            }
+            orbs[0].style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+            orbs[1].style.transform = `translate(${-x * 30}px, ${-y * 30}px)`;
         });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-        observer.observe(card);
-    });
-</script>
-</body></html>
+        // Simple scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>

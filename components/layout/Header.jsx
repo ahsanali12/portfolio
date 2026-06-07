@@ -25,7 +25,7 @@ export function Header() {
           <img
             alt="Muhammad Ahsan Ali Logo"
             className="w-8 h-8 md:w-10 md:h-10 object-contain"
-            src="https://lh3.googleusercontent.com/aida/AP1WRLsgMa6Q3AUrimJawFsuMPq8B7NVru_1KBFEWJppr3PeHHrdRhLSTXaTGfy7W69LjlrPx7NA0NrjBZLmmjXVqDZcTEeeghy3x6O64hRGRb2HutP8l_5lOYAmT0frmtSrpn3Iu89Ou3KwZPETnTD42-VZjAQnmV-8SEDvfVSaprjSX69OuCfmDaIbY-aaT54wtTEvKOz41b0e4c4gMUPZl6UsIKCa7r0gBCTsVLDpUIBapYfkwIq8comiCw8w"
+            src="/favicon.png"
           />
           <span className="font-headline-md text-[20px] md:text-headline-md font-bold text-on-surface tracking-tighter whitespace-nowrap">
             Muhammad Ahsan Ali
