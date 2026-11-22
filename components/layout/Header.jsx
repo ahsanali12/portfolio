@@ -19,6 +19,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
+    <>
     <header className="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md border-b border-white/10 shadow-sm">
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
         <Link href="/" className="flex items-center gap-3">
@@ -32,7 +33,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-gutter">
+        <nav className="hidden xl:flex items-center gap-gutter">
           {navItems.map((item) => {
             const active = pathname === item.href;
             return (
@@ -51,7 +52,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden lg:flex">
+        <div className="hidden xl:flex">
           <a
             href={siteConfig.calendlyUrl}
             target="_blank"
@@ -63,15 +64,16 @@ export function Header() {
         </div>
 
         <button
-          className="lg:hidden text-on-surface"
+          className="xl:hidden text-on-surface w-11 h-11 flex items-center justify-center"
           aria-label="Toggle navigation"
           onClick={() => setOpen((v) => !v)}
         >
           <span className="material-symbols-outlined">{open ? "close" : "menu"}</span>
         </button>
+
       </div>
 
-      <div className={`${open ? "block" : "hidden"} lg:hidden bg-surface/95 backdrop-blur-md border-b border-white/10 px-margin-mobile py-4`}>
+      <div className={`${open ? "block" : "hidden"} xl:hidden bg-surface/95 backdrop-blur-md border-b border-white/10 px-margin-mobile py-4`}>
         <nav className="flex flex-col gap-4">
           {navItems.map((item) => (
             <Link
@@ -94,6 +96,16 @@ export function Header() {
         </nav>
       </div>
     </header>
+      <a
+        href={siteConfig.calendlyUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="xl:hidden fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-full font-label-md text-label-md font-bold shadow-[0_0_20px_rgba(173,198,255,0.4)]"
+      >
+        <span className="material-symbols-outlined text-[18px]">calendar_today</span>
+        Book a Call
+      </a>
+    </>
   );
 }
 
