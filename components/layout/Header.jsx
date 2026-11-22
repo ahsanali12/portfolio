@@ -57,9 +57,9 @@ export function Header() {
             href={siteConfig.calendlyUrl}
             target="_blank"
             rel="noreferrer"
-            className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md text-label-md font-bold hover:scale-95 transition-all duration-300"
+            className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-xl font-label-md text-label-md font-bold hover:scale-95 transition-all duration-300"
           >
-            Book Consultation
+            Book a Call
           </a>
         </div>
 
@@ -89,9 +89,9 @@ export function Header() {
             href={siteConfig.calendlyUrl}
             target="_blank"
             rel="noreferrer"
-            className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-md text-label-md font-bold text-center mt-2"
+            className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-xl font-label-md text-label-md font-bold text-center mt-2"
           >
-            Book Consultation
+            Book a Call
           </a>
         </nav>
       </div>
@@ -100,7 +100,7 @@ export function Header() {
         href={siteConfig.calendlyUrl}
         target="_blank"
         rel="noreferrer"
-        className="xl:hidden fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-full font-label-md text-label-md font-bold shadow-[0_0_20px_rgba(173,198,255,0.4)]"
+        className="xl:hidden fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-xl font-label-md text-label-md font-bold shadow-[0_0_20px_rgba(173,198,255,0.4)]"
       >
         <span className="material-symbols-outlined text-[18px]">calendar_today</span>
         Book a Call
