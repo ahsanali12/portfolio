@@ -29,6 +29,7 @@ export const siteConfig = {
   ],
   locale: "en_US",
   siteUrl: "https://muhammadahsanali.vercel.app",
+  gaMeasurementId: "G-CNWFBMSWEJ",
   calendlyUrl: "https://calendly.com/devahsanali/30min",
   social: {
     github: "https://github.com/muhammadahsanali",
