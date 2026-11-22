@@ -1,20 +1,27 @@
 import { notFound } from "next/navigation";
-import { ContentPage } from "@/components/ContentPage";
+import { LegacyMain } from "@/components/LegacyMain";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { caseStudies } from "@/lib/case-study-data";
-import { buildMetadata, absoluteUrl } from "@/lib/seo";
+import { getPageMain } from "@/lib/legacy-content";
+import { buildMetadata, articleSchema, breadcrumbSchema } from "@/lib/seo";
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return Object.keys(caseStudies).map((slug) => ({ slug }));
 }
 
-export const dynamicParams = false;
-
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const study = caseStudies[slug];
   if (!study) return {};
-  return buildMetadata({ title: study.title, description: study.description, path: study.path });
+  return buildMetadata({
+    title: study.title,
+    description: study.description,
+    path: study.path,
+    keywords: study.keywords,
+    type: "article",
+  });
 }
 
 export default async function CaseStudyDetailPage({ params }) {
@@ -25,16 +32,23 @@ export default async function CaseStudyDetailPage({ params }) {
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Article",
+        data={articleSchema({
           headline: study.title,
           description: study.description,
-          author: { "@type": "Person", name: "Muhammad Ahsan Ali", url: absoluteUrl("/") },
-          mainEntityOfPage: absoluteUrl(study.path),
-        }}
+          path: study.path,
+          keywords: study.keywords,
+        })}
       />
-      <ContentPage name={study.file} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Case Studies", path: "/case-studies" },
+          { name: study.title, path: study.path },
+        ])}
+      />
+      <div className="min-h-screen pt-20">
+        <LegacyMain html={getPageMain(study.file)} />
+      </div>
     </>
   );
 }

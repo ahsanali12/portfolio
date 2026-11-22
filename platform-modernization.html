@@ -191,17 +191,15 @@
                     <span
                         class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary font-label-md text-[12px] uppercase tracking-widest rounded-full">Case
                         Study</span>
-                    <span class="text-on-surface-variant font-label-md text-[12px] uppercase tracking-widest">Enterprise
-                        SaaS</span>
+                    <span class="text-on-surface-variant font-label-md text-[12px] uppercase tracking-widest">E-commerce</span>
                 </div>
                 <h1
                     class="font-headline-lg text-headline-lg text-[45px] md:text-display-lg text-on-surface leading-tight">
-                    Platform Modernization <br class="block sm:hidden" />
-                    <span class="text-primary">&amp; Scalability Audit</span>
+                    Legacy Platform Modernization <br class="block sm:hidden" />
+                    <span class="text-primary">for ~1M Users</span>
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
-                    A deep dive into transitioning a monolithic HR platform to a distributed microservices architecture
-                    for a high-growth HRTech venture.
+                    How I modernized a legacy PHP e-commerce, CRM and marketing platform for an Australian electronics retailer serving ~1M users.
                 </p>
             </div>
             <!-- Hero Stats Grid -->
@@ -213,14 +211,12 @@
                         Uplift</span>
                 </div>
                 <div class="glass-card p-10 flex flex-col gap-2">
-                    <span class="text-primary font-headline-lg text-headline-lg tracking-tighter">40%</span>
-                    <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Cost
-                        Reduction</span>
+                    <span class="text-primary font-headline-lg text-headline-lg tracking-tighter">~$6k</span>
+                    <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Monthly Server Savings</span>
                 </div>
                 <div class="glass-card p-10 flex flex-col gap-2">
-                    <span class="text-tertiary font-headline-lg text-headline-lg tracking-tighter">99.99%</span>
-                    <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">System
-                        Uptime</span>
+                    <span class="text-tertiary font-headline-lg text-headline-lg tracking-tighter">~1M</span>
+                    <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Users Served</span>
                 </div>
             </div>
         </section>
@@ -231,9 +227,7 @@
                     <h2 class="font-headline-lg text-headline-lg text-on-surface">The Challenge</h2>
                     <div class="space-y-6">
                         <p class="font-body-lg text-body-lg text-on-surface-variant">
-                            The client's core HR platform was struggling under the weight of a 7-year-old monolithic
-                            architecture. As user acquisition tripled, the system became brittle, expensive, and
-                            difficult to update.
+                            The platform ran on an outdated PHP framework with old PHP and MySQL versions and messy legacy code. Pages and queries were slow, heavy processes took the server down during traffic spikes, and server bills kept rising.
                         </p>
                         <ul class="space-y-4">
                             <li class="flex items-start gap-4">
@@ -241,17 +235,17 @@
                                     data-icon="warning">warning</span>
                                 <div>
                                     <h4 class="font-headline-md text-[20px] text-on-surface">Legacy Bottlenecks</h4>
-                                    <p class="font-body-md text-body-md text-on-surface-variant">Database contention
-                                        causing timeouts during peak payroll cycles.</p>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Slow queries
+                                        and heavy processes causing timeouts and crashes during traffic spikes.</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-4">
                                 <span class="material-symbols-outlined text-error mt-1"
                                     data-icon="trending_down">trending_down</span>
                                 <div>
-                                    <h4 class="font-headline-md text-[20px] text-on-surface">40% Cost Inefficiency</h4>
-                                    <p class="font-body-md text-body-md text-on-surface-variant">Inability to scale
-                                        individual modules led to massive over-provisioning of resources.</p>
+                                    <h4 class="font-headline-md text-[20px] text-on-surface">Rising Server Costs</h4>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Over-provisioned servers
+                                        individual modules meant bills kept growing while complaints and drop-offs went up.</p>
                                 </div>
                             </li>
                         </ul>
@@ -267,7 +261,7 @@
                                 class="w-48 h-48 bg-error/20 border-2 border-dashed border-error rounded-xl flex items-center justify-center flex-col gap-2 animate-pulse">
                                 <span class="material-symbols-outlined text-[48px] text-error"
                                     data-icon="view_quilt">view_quilt</span>
-                                <span class="font-label-md text-label-md text-error">MONOLITH</span>
+                                <span class="font-label-md text-label-md text-error">LEGACY PHP</span>
                             </div>
                             <!-- Arrows of pressure -->
                             <div class="absolute top-1/4 left-1/4 material-symbols-outlined text-error/40 text-4xl"
@@ -284,8 +278,7 @@
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center mb-16 max-w-3xl mx-auto flex flex-col gap-4">
                     <h2 class="font-headline-lg text-headline-lg text-on-surface">The Solution: Strategic Pivot</h2>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">Implementing a domain-driven design
-                        (DDD) approach to decouple the system and automate the lifecycle.</p>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">Modernizing in stages without stopping sales, then building an engineering system so the team could ship safely.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <!-- Architecture Diagram Container -->
@@ -294,26 +287,26 @@
                             <div
                                 class="w-24 h-24 rounded-full bg-primary/20 border border-primary flex items-center justify-center flex-col gap-1">
                                 <span class="material-symbols-outlined text-primary" data-icon="router">router</span>
-                                <span class="text-[10px] text-primary font-bold">GATEWAY</span>
+                                <span class="text-[10px] text-primary font-bold">PLATFORM</span>
                             </div>
                         </div>
                         <div class="flex flex-wrap justify-center gap-10">
                             <div
                                 class="w-32 h-20 bg-surface-container-high border border-outline-variant flex flex-col items-center justify-center p-2 text-center">
                                 <span class="material-symbols-outlined text-secondary" data-icon="groups">groups</span>
-                                <span class="text-[10px] text-on-surface-variant">Identity Service</span>
+                                <span class="text-[10px] text-on-surface-variant">E-commerce</span>
                             </div>
                             <div
                                 class="w-32 h-20 bg-surface-container-high border border-outline-variant flex flex-col items-center justify-center p-2 text-center">
                                 <span class="material-symbols-outlined text-tertiary"
                                     data-icon="payments">payments</span>
-                                <span class="text-[10px] text-on-surface-variant">Payroll Engine</span>
+                                <span class="text-[10px] text-on-surface-variant">CRM</span>
                             </div>
                             <div
                                 class="w-32 h-20 bg-surface-container-high border border-outline-variant flex flex-col items-center justify-center p-2 text-center">
                                 <span class="material-symbols-outlined text-primary"
                                     data-icon="analytics">analytics</span>
-                                <span class="text-[10px] text-on-surface-variant">Reporting API</span>
+                                <span class="text-[10px] text-on-surface-variant">Marketing Tools</span>
                             </div>
                         </div>
                         <div class="glow-line w-full opacity-30"></div>
@@ -326,22 +319,20 @@
                     </div>
                     <div class="flex flex-col gap-8">
                         <div class="p-6 border-l-2 border-primary bg-primary/5">
-                            <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Microservices Architecture
+                            <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Staged Modernization
                             </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant">Decomposed the monolith into 12
-                                distinct services, each independently deployable and scalable based on real-time traffic
-                                demand.</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Upgraded the framework, PHP and MySQL in stages, cleaned up the code, normalized the database, and moved heavy work into background jobs.
+                                </p>
                         </div>
                         <div class="p-6 border-l-2 border-secondary bg-secondary/5">
                             <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Automated CI/CD</h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant">Shifted from monthly manual
-                                releases to hourly automated deployments with integrated security scanning and smoke
-                                tests.</p>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Introduced a Git workflow, CI/CD pipeline and code review, replacing manual releases with safe, frequent deployments.
+                                </p>
                         </div>
                         <div class="p-6 border-l-2 border-tertiary bg-tertiary/5">
-                            <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Event-Driven Integration</h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant">Utilized message brokers to
-                                ensure high availability and eventual consistency across distributed data stores.</p>
+                            <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Revenue &amp; Security</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Shipped abandoned-cart recovery, discounts and loyalty points, plus security hardening and SEO fixes across the site and CRM.
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -353,8 +344,7 @@
                 <div class="lg:col-span-4 flex flex-col justify-center gap-6">
                     <h2 class="font-headline-lg text-headline-lg text-on-surface">The Results</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">
-                        Measurable impact on both technical performance and business bottom-line metrics within 6 months
-                        of execution.
+                        Measurable impact on both technical performance and business bottom-line metrics over ~18 months.
                     </p>
                     <div class="flex flex-col gap-4">
                         <div class="flex items-center justify-between p-4 glass-card">
@@ -362,12 +352,12 @@
                             <span class="text-secondary font-bold">+60%</span>
                         </div>
                         <div class="flex items-center justify-between p-4 glass-card">
-                            <span class="font-label-md text-label-md text-on-surface">Infrastructure Cost</span>
-                            <span class="text-error font-bold">-40%</span>
+                            <span class="font-label-md text-label-md text-on-surface">Server Cost</span>
+                            <span class="text-error font-bold">-$6k/mo</span>
                         </div>
                         <div class="flex items-center justify-between p-4 glass-card">
-                            <span class="font-label-md text-label-md text-on-surface">Deployment Speed</span>
-                            <span class="text-primary font-bold">12x Faster</span>
+                            <span class="font-label-md text-label-md text-on-surface">Traffic Spikes</span>
+                            <span class="text-primary font-bold">No Downtime</span>
                         </div>
                     </div>
                 </div>
@@ -414,7 +404,7 @@
         <!-- Image Breakpoint -->
         <section class="w-full py-16">
             <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden rounded-xl">
-                <img class="w-full h-[500px] object-cover rounded-xl filter grayscale contrast-125 opacity-70 hover:opacity-100 transition-opacity duration-700"
+                <img alt="Legacy PHP e-commerce platform modernization architecture" class="w-full h-[500px] object-cover rounded-xl filter grayscale contrast-125 opacity-70 hover:opacity-100 transition-opacity duration-700"
                     data-alt="A sophisticated data center interior with servers glowing in electric blue and purple neon lights. The environment is sleek and ultra-modern, showcasing high-tech infrastructure and cloud computing hardware. Minimalist architectural lines and glass surfaces reflect the cool-toned lighting, creating a futuristic command center atmosphere. The overall mood is professional, secure, and technologically advanced, perfectly aligned with enterprise SaaS aesthetic."
                     src="/images/img_12.webp" />
             </div>
@@ -427,7 +417,7 @@
                 </h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">
                     Whether you are battling legacy debt or planning for hyper-scale, get a technical audit that
-                    provides a clear roadmap to 10x scalability.
+                    provides a clear roadmap to scale.
                 </p>
                 <div class="flex flex-col md:flex-row gap-4 justify-center w-full md:w-auto">
                     <button
