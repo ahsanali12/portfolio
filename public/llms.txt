@@ -1,0 +1,26 @@
+# Muhammad Ahsan Ali
+
+> Software architect and engineering leader with 12+ years of experience. Helps founders and growing companies rescue, modernize and scale SaaS and e-commerce products, and add practical AI. Based in Karachi, Pakistan; works remotely with clients in the US, Australia and the UAE.
+
+## Key facts
+- Led cross-functional teams of 10-12 twice with CTO-level responsibility (Technical Lead, Technical Manager).
+- Cut load times ~60% and server costs ~$6k/month on an Australian retailer's e-commerce + CRM platform serving ~1M users.
+- Leads development of a US multi-vendor platform with thousands of users, including AI workflow features.
+- Designed and built a trading platform and trading engine from scratch for a UAE client.
+- MS Computer Science (NLP), BS Computer Science.
+
+## Services
+- [Production-Readiness Review](https://muhammadahsanali.vercel.app/services): scored report (PRS, out of 100), top risks, fix plan. From $2,500.
+- [Rescue & Modernization](https://muhammadahsanali.vercel.app/services): AI-built (Lovable, Bolt, Cursor) and legacy PHP/Laravel apps. $8k-25k.
+- [AI Integration](https://muhammadahsanali.vercel.app/services): AI workflows inside existing products. From $8,000.
+- [Fractional CTO](https://muhammadahsanali.vercel.app/services): $4k-8k/month.
+
+## Pages
+- [Case studies](https://muhammadahsanali.vercel.app/case-studies)
+- [About and hire me](https://muhammadahsanali.vercel.app/about)
+- [Book a free 30-min teardown](https://calendly.com/devahsanali/30min)
+
+## Profiles
+- [LinkedIn](https://www.linkedin.com/in/muhammad-ahsan-ali)
+- [GitHub](https://github.com/muhammadahsanali)
+- [X](https://x.com/devahsanali)

@@ -1,13 +1,14 @@
 export const siteConfig = {
   name: "Muhammad Ahsan Ali",
-  title: "Muhammad Ahsan Ali - Fractional CTO & Technology Strategist",
+  title: "Muhammad Ahsan Ali | Software Architect & Engineering Leader",
   description:
-    "Fractional CTO, technical founder partner, and SaaS architect helping startups and enterprises scale teams, systems, and strategic execution.",
-  siteUrl: "https://muhammadahsanali.com",
+    "Software architect and engineering leader with 12+ years of experience. I rescue, modernize and scale SaaS and e-commerce products, and add practical AI.",
+  // Change to https://muhammadahsanali.dev once the domain is bought.
+  siteUrl: "https://muhammadahsanali.vercel.app",
   calendlyUrl: "https://calendly.com/devahsanali/30min",
   social: {
     github: "https://github.com/muhammadahsanali",
-    linkedin: "https://pk.linkedin.com/in/muhammad-ahsan-ali",
+    linkedin: "https://www.linkedin.com/in/muhammad-ahsan-ali",
     x: "https://x.com/devahsanali",
   },
   paths: {
@@ -15,9 +16,7 @@ export const siteConfig = {
     about: "/about",
     services: "/services",
     caseStudies: "/case-studies",
-    research: "/research",
-    mentorship: "/mentorship",
+    hire: "/about#hire",
     contact: "/contact",
   },
 };
-

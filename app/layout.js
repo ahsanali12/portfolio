@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { VisualEffects } from "@/components/layout/VisualEffects";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { organizationSchema, personSchema, websiteSchema } from "@/lib/seo";
+import { personSchema, websiteSchema } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
 export const metadata = {
@@ -40,7 +40,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-body-md text-on-surface antialiased bg-surface-dim overflow-x-hidden">
-        <JsonLd data={organizationSchema()} />
         <JsonLd data={personSchema()} />
         <JsonLd data={websiteSchema()} />
         <div id="stream-container" className="fixed inset-0 pointer-events-none overflow-hidden z-0" />

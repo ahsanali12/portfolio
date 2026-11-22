@@ -15,8 +15,8 @@ export function Footer() {
             <div className="font-headline-md text-2xl text-on-surface">Muhammad Ahsan Ali</div>
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
-            Strategic technology leadership for high-growth startups and established enterprises.
-            Delivering clarity in complexity. MSc Researcher focusing on AI and scalable architectures.
+            Software architect and engineering leader. I make software survive real users: rescue,
+            modernization, scaling and practical AI for founders and growing companies.
           </p>
         </div>
 
@@ -25,10 +25,9 @@ export function Footer() {
             <div className="space-y-4">
               <h5 className="text-xs font-bold uppercase tracking-widest text-primary">Navigation</h5>
               <nav className="flex flex-col gap-2">
-                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/about">About</Link>
-                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/services">Services</Link>
+                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/services">Work with me</Link>
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/case-studies">Case Studies</Link>
-                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/research">Research</Link>
+                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/about">About</Link>
               </nav>
             </div>
             <div className="space-y-4">
@@ -40,9 +39,10 @@ export function Footer() {
               </nav>
             </div>
             <div className="space-y-4">
-              <h5 className="text-xs font-bold uppercase tracking-widest text-tertiary">Community</h5>
+              <h5 className="text-xs font-bold uppercase tracking-widest text-tertiary">Start</h5>
               <nav className="flex flex-col gap-2">
-                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/mentorship">Mentorship</Link>
+                <a className="text-sm text-on-surface-variant hover:text-secondary transition-all" href={siteConfig.calendlyUrl} target="_blank" rel="noreferrer">Free teardown</a>
+                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/about#hire">Hire me</Link>
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all" href="/contact">Contact</Link>
               </nav>
             </div>

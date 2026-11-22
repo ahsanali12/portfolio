@@ -1,12 +1,11 @@
-import { LegacyMain } from "@/components/LegacyMain";
+import { ContentPage } from "@/components/ContentPage";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getPageMain } from "@/lib/legacy-content";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Case Studies",
   description:
-    "Strategic technical case studies across platform modernization, SaaS scaling, and AI-powered transformation.",
+    "Real results: ~60% faster load times and ~$6k/month lower server costs on a ~1M-user retail platform, 10+ client products delivered as Technical Lead, and more.",
   path: "/case-studies",
 });
 
@@ -23,10 +22,7 @@ export default function CaseStudiesPage() {
           ],
         }}
       />
-      <div className="min-h-screen pt-20">
-        <LegacyMain html={getPageMain("case-studies.html")} />
-      </div>
+      <ContentPage name="case-studies" />
     </>
   );
 }
-

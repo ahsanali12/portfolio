@@ -1,23 +1,13 @@
-import { LegacyMain } from "@/components/LegacyMain";
-import { getPageMain } from "@/lib/legacy-content";
+import { ContentPage } from "@/components/ContentPage";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "About",
+  title: "About & Hire Me",
   description:
-    "Learn about Muhammad Ahsan Ali's engineering leadership, enterprise delivery, and scalable SaaS strategy experience.",
+    "Muhammad Ahsan Ali: software architect and engineering leader with 12+ years of experience, teams of 10-12 led with CTO-level scope. Open to senior remote roles.",
   path: "/about",
 });
 
 export default function AboutPage() {
-  const html = getPageMain("about.html");
-
-  console.log("ABOUT HTML:", html);
-  console.log("LENGTH:", html?.length);
-
-  return (
-      <div className="min-h-screen pt-20">
-        <LegacyMain html={html || "<h1>NO HTML LOADED</h1>"} />
-      </div>
-  );
+  return <ContentPage name="about" />;
 }

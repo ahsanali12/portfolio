@@ -1,32 +1,38 @@
-import { LegacyMain } from "@/components/LegacyMain";
+import { ContentPage } from "@/components/ContentPage";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getPageMain } from "@/lib/legacy-content";
 import { buildMetadata, absoluteUrl } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Services",
+  title: "Work With Me",
   description:
-    "Fractional CTO, SaaS architecture, founder partnership, AI automation, and technical mentorship services.",
+    "Production-readiness reviews, rescue and modernization of AI-built and legacy apps, AI integration and fractional CTO leadership, with fixed scope and clear prices.",
   path: "/services",
 });
+
+const services = [
+  "Production-Readiness Review",
+  "Rescue & Modernization",
+  "AI Integration",
+  "Fractional CTO",
+];
 
 export default function ServicesPage() {
   return (
     <>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          name: "Fractional CTO Services",
-          provider: { "@type": "Person", name: "Muhammad Ahsan Ali" },
-          areaServed: "Global",
-          url: absoluteUrl("/services"),
-        }}
-      />
-      <div className="min-h-screen pt-20">
-        <LegacyMain html={getPageMain("services.html")} />
-      </div>
+      {services.map((name) => (
+        <JsonLd
+          key={name}
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name,
+            provider: { "@type": "Person", name: "Muhammad Ahsan Ali" },
+            areaServed: ["US", "GB", "CA", "AU", "AE"],
+            url: absoluteUrl("/services"),
+          }}
+        />
+      ))}
+      <ContentPage name="services" />
     </>
   );
 }
-

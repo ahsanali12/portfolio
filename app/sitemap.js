@@ -1,17 +1,7 @@
 import { siteConfig } from "@/config/site";
+import { caseStudies } from "@/lib/case-study-data";
 
-const routes = [
-  "",
-  "/about",
-  "/services",
-  "/case-studies",
-  "/case-studies/platform-modernization",
-  "/case-studies/saas-scaling",
-  "/case-studies/gen-ai",
-  "/research",
-  "/mentorship",
-  "/contact",
-];
+const routes = ["", "/services", "/case-studies", "/about", "/contact", ...Object.values(caseStudies).map((s) => s.path)];
 
 export default function sitemap() {
   return routes.map((route) => ({
@@ -21,4 +11,3 @@ export default function sitemap() {
     priority: route === "" ? 1 : 0.8,
   }));
 }
-
