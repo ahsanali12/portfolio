@@ -5,6 +5,11 @@ import { siteConfig } from "@/config/site";
 const routes = [
   { path: "", lastModified: "2026-11-23", priority: 1 },
   { path: "/services", lastModified: "2026-11-23", priority: 0.9 },
+  { path: "/services/fractional-cto", lastModified: "2026-11-23", priority: 0.9 },
+  { path: "/services/ai-integration", lastModified: "2026-11-23", priority: 0.9 },
+  { path: "/services/saas-architecture", lastModified: "2026-11-23", priority: 0.8 },
+  { path: "/services/legacy-modernization", lastModified: "2026-11-23", priority: 0.8 },
+  { path: "/services/technical-founder-partner", lastModified: "2026-11-23", priority: 0.8 },
   { path: "/case-studies", lastModified: "2026-11-23", priority: 0.9 },
   { path: "/case-studies/gen-ai", lastModified: "2026-11-23", priority: 0.8 },
   { path: "/case-studies/platform-modernization", lastModified: "2026-11-23", priority: 0.8 },

@@ -2,6 +2,7 @@ import { siteConfig } from "@/config/site";
 import { homeFaq, servicesFaq } from "@/lib/faq";
 import { testimonials } from "@/lib/testimonials";
 import { caseStudies } from "@/lib/case-study-data";
+import { servicePages } from "@/lib/service-pages";
 
 export const dynamic = "force-static";
 
@@ -50,6 +51,12 @@ export function GET() {
   lines.push("- AI & automation: generative AI, LLM and RAG integration, NLP, AI chatbots, workflow automation with n8n and Python.");
   lines.push("- Academic mentorship: visiting faculty guidance, workshops, tech talks, curriculum advisory.");
   lines.push(`Details: ${url("/services")}`, "");
+
+  lines.push("## Service pages", "");
+  for (const [slug, p] of Object.entries(servicePages)) {
+    lines.push(`### ${p.title}`, `URL: ${url(`/services/${slug}`)}`, p.intro, "Deliverables:", ...p.deliverables.map((d) => `- ${d}`), "");
+    for (const f of p.faq) lines.push(`Q: ${f.q}`, `A: ${f.a}`, "");
+  }
 
   lines.push("## Case studies", "");
   for (const [slug, study] of Object.entries(caseStudies)) {

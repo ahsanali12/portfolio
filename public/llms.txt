@@ -11,11 +11,12 @@
 - Designed and built a trading platform and trading engine from scratch for a UAE client; business automation with n8n and Python.
 
 ## Services
-- [Fractional CTO](https://muhammadahsanali.vercel.app/services): technical strategy, roadmap, team building, due diligence.
-- [Founder Partner](https://muhammadahsanali.vercel.app/services): MVP planning, technical hiring, product validation for non-technical founders.
-- [SaaS Architecture](https://muhammadahsanali.vercel.app/services): multi-tenant, API-first, scalable platforms.
-- [AI & Automation](https://muhammadahsanali.vercel.app/services): LLM and RAG integration, NLP, workflow automation.
-- [Academic Mentorship](https://muhammadahsanali.vercel.app/mentorship): visiting faculty, workshops, curriculum advisory.
+- [Fractional CTO](https://muhammadahsanali.vercel.app/services/fractional-cto): technology strategy, architecture, hiring, delivery ownership, due diligence.
+- [AI integration & RAG development](https://muhammadahsanali.vercel.app/services/ai-integration): RAG chatbots, LLM features, guardrails, n8n/Python automation.
+- [SaaS architecture & scaling](https://muhammadahsanali.vercel.app/services/saas-architecture): multi-tenant and multi-vendor platforms, performance, cost control.
+- [Legacy PHP & Laravel modernization](https://muhammadahsanali.vercel.app/services/legacy-modernization): staged upgrades without downtime, faster pages, lower server costs.
+- [Technical founder partner](https://muhammadahsanali.vercel.app/services/technical-founder-partner): MVP scoping, stack choice, first developer hires.
+- [Academic mentorship](https://muhammadahsanali.vercel.app/mentorship): visiting faculty, workshops, curriculum advisory.
 
 ## Frequently asked questions
 - [What does a fractional CTO do, cost and when do you need one?](https://muhammadahsanali.vercel.app/#faq)
