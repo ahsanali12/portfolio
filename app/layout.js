@@ -8,6 +8,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema, personSchema, websiteSchema } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
+// Only the icons the site uses (keep sorted). Add a name here when a new icon is used.
+const MATERIAL_ICONS =
+  "account_balance_wallet,account_tree,add,alternate_email,analytics,architecture,arrow_forward,arrow_outward,auto_awesome,bolt,calendar_today,check_circle,clinical_notes,close,co_present,cycle,database,deployed_code,diversity_3,engineering,format_quote,group_remove,groups,hub,layers,lightbulb,menu,military_tech,north_west,payments,psychology,query_stats,record_voice_over,rocket_launch,router,school,settings_suggest,share,shield,smart_toy,south_east,speed,star,terminal,trending_down,trending_up,verified,verified_user,view_quilt,warning,workspace_premium";
+const MATERIAL_SYMBOLS_URL = `https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=${MATERIAL_ICONS}&display=block`;
+
 export const metadata = {
   title: { default: siteConfig.title, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
@@ -25,9 +30,13 @@ export const metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
@@ -48,12 +57,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark overflow-x-hidden">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href={MATERIAL_SYMBOLS_URL}
           rel="stylesheet"
         />
       </head>

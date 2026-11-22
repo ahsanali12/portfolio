@@ -17,7 +17,15 @@
 - [AI & Automation](https://muhammadahsanali.vercel.app/services): LLM and RAG integration, NLP, workflow automation.
 - [Academic Mentorship](https://muhammadahsanali.vercel.app/mentorship): visiting faculty, workshops, curriculum advisory.
 
+## Frequently asked questions
+- [What does a fractional CTO do, cost and when do you need one?](https://muhammadahsanali.vercel.app/#faq)
+- [How engagements work, AI project scope, tech stack, NDAs](https://muhammadahsanali.vercel.app/services#faq)
+
+## Client feedback
+- 8 approved testimonials from a retail CEO, a FinTech CTO, a UAE trading-platform founder, a software-studio CEO, an agency founder, a SaaS product manager, a former team member and a student (shown by role, no company names).
+
 ## Pages
+- [Full profile for AI assistants (case study details, testimonials, FAQ)](https://muhammadahsanali.vercel.app/llms-full.txt)
 - [Case studies](https://muhammadahsanali.vercel.app/case-studies)
 - [Generative AI support engine (case study)](https://muhammadahsanali.vercel.app/case-studies/gen-ai)
 - [Legacy platform modernization (case study)](https://muhammadahsanali.vercel.app/case-studies/platform-modernization)

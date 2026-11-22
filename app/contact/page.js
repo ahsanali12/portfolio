@@ -4,7 +4,7 @@ import { getPageMain } from "@/lib/legacy-content";
 import { buildMetadata, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 
 const description =
-  "Book a call with Muhammad Ahsan Ali for fractional CTO support, an architecture review, technical due diligence, AI integration or an engineering team assessment.";
+  "Book a free 30-minute call with Muhammad Ahsan Ali for fractional CTO support, an architecture review, technical due diligence or AI integration.";
 
 export const metadata = buildMetadata({
   title: "Contact: Book a Fractional CTO or AI Consultation",

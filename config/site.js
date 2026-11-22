@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Muhammad Ahsan Ali | Fractional CTO & AI Engineering Leader",
   jobTitle: "Fractional CTO & AI Engineering Leader",
   description:
-    "Fractional CTO & AI engineering leader (12+ yrs). I help startups scale SaaS platforms, modernize legacy systems and ship production AI: LLM, RAG, NLP and automation.",
+    "Fractional CTO & AI engineering leader, 12+ years. I help startups scale SaaS, modernize legacy systems and ship production AI: LLM, RAG and automation.",
   keywords: [
     "Fractional CTO",
     "Fractional CTO for startups",
@@ -33,7 +33,7 @@ export const siteConfig = {
   calendlyUrl: "https://calendly.com/devahsanali/30min",
   social: {
     github: "https://github.com/muhammadahsanali",
-    linkedin: "https://pk.linkedin.com/in/muhammad-ahsan-ali",
+    linkedin: "https://www.linkedin.com/in/muhammad-ahsan-ali",
     x: "https://x.com/devahsanali",
   },
   paths: {

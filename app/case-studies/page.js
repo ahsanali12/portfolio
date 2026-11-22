@@ -5,7 +5,7 @@ import { buildMetadata, absoluteUrl, breadcrumbSchema } from "@/lib/seo";
 import { caseStudies } from "@/lib/case-study-data";
 
 const description =
-  "Real case studies: legacy e-commerce modernization for ~1M users (~60% faster, ~$6k/month saved), a RAG-based generative AI support engine (85% of tier-1 queries) and AI workflows on a multi-vendor SaaS platform.";
+  "Real results: legacy e-commerce modernization for ~1M users, a RAG AI support engine handling 85% of tier-1 queries, and AI workflows on multi-vendor SaaS.";
 
 export const metadata = buildMetadata({
   title: "Case Studies: Platform Modernization, SaaS Scaling & Generative AI",

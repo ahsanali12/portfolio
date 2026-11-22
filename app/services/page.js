@@ -2,9 +2,10 @@ import { LegacyMain } from "@/components/LegacyMain";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getPageMain } from "@/lib/legacy-content";
 import { buildMetadata, absoluteUrl, breadcrumbSchema, PERSON_ID } from "@/lib/seo";
+import { servicesFaq, faqSchema } from "@/lib/faq";
 
 const description =
-  "Fractional CTO, technical founder partner, SaaS architecture, AI & automation (LLM, RAG, NLP, n8n) and academic mentorship services for startups and growing companies.";
+  "Fractional CTO, technical founder partner, SaaS architecture and AI integration (LLM, RAG, n8n) for startups and growing companies. Free 30-min call.";
 
 const services = [
   { name: "Fractional CTO", description: "Executive-level technical strategy, product roadmap, team building, process design, board reporting and technical due diligence without a full-time hire." },
@@ -45,6 +46,7 @@ export default function ServicesPage() {
         }}
       />
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }])} />
+      <JsonLd data={faqSchema(servicesFaq)} />
       <div className="min-h-screen pt-20">
         <LegacyMain html={getPageMain("services.html")} />
       </div>

@@ -4,7 +4,7 @@ import { getPageMain } from "@/lib/legacy-content";
 import { buildMetadata, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 
 const description =
-  "Research and insights from Muhammad Ahsan Ali (MS Computer Science, NLP) on natural language processing, LLMs, AI automation, SaaS architecture and fractional CTO leadership.";
+  "Research and insights from Muhammad Ahsan Ali (MS CS, NLP) on natural language processing, LLMs, AI automation, SaaS architecture and CTO leadership.";
 
 export const metadata = buildMetadata({
   title: "Research: NLP, AI & Software Architecture Insights",

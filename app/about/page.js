@@ -4,7 +4,7 @@ import { getPageMain } from "@/lib/legacy-content";
 import { buildMetadata, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 
 const description =
-  "About Muhammad Ahsan Ali: Fractional CTO, software architect and AI engineering leader with 12+ years, MS Computer Science (NLP). Led teams of 10-12 and scaled platforms serving ~1M users.";
+  "About Muhammad Ahsan Ali: Fractional CTO, software architect and AI engineering leader. 12+ years, MS Computer Science (NLP), teams of 10-12 led.";
 
 export const metadata = buildMetadata({
   title: "About: Fractional CTO, Software Architect & NLP Researcher",

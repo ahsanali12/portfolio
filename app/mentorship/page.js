@@ -4,7 +4,7 @@ import { getPageMain } from "@/lib/legacy-content";
 import { buildMetadata, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 
 const description =
-  "Mentorship and visiting faculty work by Muhammad Ahsan Ali: guiding computer science students in software engineering, AI and system architecture, plus workshops, tech talks and curriculum advisory.";
+  "Mentorship by Muhammad Ahsan Ali: visiting faculty guidance for computer science students in software engineering and AI, plus workshops and tech talks.";
 
 export const metadata = buildMetadata({
   title: "Mentorship & Visiting Faculty: Software Engineering and AI",

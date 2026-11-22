@@ -1,24 +1,25 @@
 import { siteConfig } from "@/config/site";
 
+// Real last-changed date per page. Update a page's date when its content changes,
+// so search engines can trust these values.
 const routes = [
-  "",
-  "/about",
-  "/services",
-  "/case-studies",
-  "/case-studies/platform-modernization",
-  "/case-studies/saas-scaling",
-  "/case-studies/gen-ai",
-  "/research",
-  "/mentorship",
-  "/contact",
+  { path: "", lastModified: "2026-11-23", priority: 1 },
+  { path: "/services", lastModified: "2026-11-23", priority: 0.9 },
+  { path: "/case-studies", lastModified: "2026-11-23", priority: 0.9 },
+  { path: "/case-studies/gen-ai", lastModified: "2026-11-23", priority: 0.8 },
+  { path: "/case-studies/platform-modernization", lastModified: "2026-11-23", priority: 0.8 },
+  { path: "/case-studies/saas-scaling", lastModified: "2026-11-23", priority: 0.8 },
+  { path: "/about", lastModified: "2026-11-23", priority: 0.8 },
+  { path: "/contact", lastModified: "2026-11-23", priority: 0.7 },
+  { path: "/research", lastModified: "2026-11-23", priority: 0.6 },
+  { path: "/mentorship", lastModified: "2026-11-23", priority: 0.6 },
 ];
 
 export default function sitemap() {
-  return routes.map((route) => ({
-    url: `${siteConfig.siteUrl}${route || "/"}`,
-    lastModified: new Date(),
+  return routes.map((r) => ({
+    url: `${siteConfig.siteUrl}${r.path || "/"}`,
+    lastModified: r.lastModified,
     changeFrequency: "monthly",
-    priority: route === "" ? 1 : 0.8,
+    priority: r.priority,
   }));
 }
-

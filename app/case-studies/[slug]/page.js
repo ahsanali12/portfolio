@@ -37,6 +37,8 @@ export default async function CaseStudyDetailPage({ params }) {
           description: study.description,
           path: study.path,
           keywords: study.keywords,
+          datePublished: study.datePublished,
+          dateModified: study.dateModified,
         })}
       />
       <JsonLd
@@ -47,7 +49,7 @@ export default async function CaseStudyDetailPage({ params }) {
         ])}
       />
       <div className="min-h-screen pt-20">
-        <LegacyMain html={getPageMain(study.file)} />
+        <LegacyMain html={getPageMain(study.file, { dateModified: study.dateModified })} />
       </div>
     </>
   );
