@@ -29,6 +29,7 @@ export function Footer() {
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/about">About</Link>
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/services">Services</Link>
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/case-studies">Case Studies</Link>
+                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/blog">Blog</Link>
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/research">Research</Link>
               </nav>
             </div>

@@ -3,6 +3,7 @@ import { homeFaq, servicesFaq } from "@/lib/faq";
 import { testimonials } from "@/lib/testimonials";
 import { caseStudies } from "@/lib/case-study-data";
 import { servicePages } from "@/lib/service-pages";
+import { blogPosts } from "@/lib/blog-posts";
 
 export const dynamic = "force-static";
 
@@ -61,6 +62,11 @@ export function GET() {
   lines.push("## Case studies", "");
   for (const [slug, study] of Object.entries(caseStudies)) {
     lines.push(`### ${study.title}`, `URL: ${url(study.path)}`, caseStudyDetails[slug] || study.description, "");
+  }
+
+  lines.push("## Articles", "");
+  for (const [slug, p] of Object.entries(blogPosts)) {
+    lines.push(`### ${p.title}`, `URL: ${url(`/blog/${slug}`)}`, `Short answer: ${p.answer}`, "");
   }
 
   lines.push("## Testimonials (approved by the people quoted; shown by role only)", "");

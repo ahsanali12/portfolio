@@ -9,6 +9,7 @@ const navItems = [
   { href: siteConfig.paths.about, label: "About" },
   { href: siteConfig.paths.services, label: "Services" },
   { href: siteConfig.paths.caseStudies, label: "Case Studies" },
+  { href: siteConfig.paths.blog, label: "Blog" },
   { href: siteConfig.paths.research, label: "Research" },
   { href: siteConfig.paths.mentorship, label: "Mentorship" },
   { href: siteConfig.paths.contact, label: "Contact" },

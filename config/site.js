@@ -41,6 +41,7 @@ export const siteConfig = {
     about: "/about",
     services: "/services",
     caseStudies: "/case-studies",
+    blog: "/blog",
     research: "/research",
     mentorship: "/mentorship",
     contact: "/contact",

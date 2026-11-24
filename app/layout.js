@@ -10,7 +10,7 @@ import { siteConfig } from "@/config/site";
 
 // Only the icons the site uses (keep sorted). Add a name here when a new icon is used.
 const MATERIAL_ICONS =
-  "account_balance_wallet,account_tree,add,alternate_email,analytics,architecture,arrow_forward,arrow_outward,auto_awesome,bolt,build,calendar_today,check_circle,chevron_right,clinical_notes,close,co_present,cycle,database,deployed_code,diversity_3,engineering,format_quote,group_remove,groups,hub,layers,lightbulb,lock,menu,military_tech,north_west,payments,psychology,query_stats,record_voice_over,rocket_launch,router,school,settings_suggest,share,shield,smart_toy,south_east,speed,star,support_agent,terminal,trending_down,trending_up,verified,verified_user,view_quilt,warning,workspace_premium";
+  "account_balance_wallet,account_tree,add,alternate_email,analytics,architecture,article,arrow_forward,arrow_outward,auto_awesome,bolt,build,calendar_today,check_circle,chevron_right,clinical_notes,close,co_present,cycle,database,deployed_code,diversity_3,engineering,format_quote,group_remove,groups,hub,layers,lightbulb,lock,menu,military_tech,north_west,payments,psychology,query_stats,record_voice_over,rocket_launch,router,school,settings_suggest,share,shield,smart_toy,south_east,speed,star,support_agent,terminal,trending_down,trending_up,verified,verified_user,view_quilt,warning,workspace_premium";
 const MATERIAL_SYMBOLS_URL = `https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&icon_names=${MATERIAL_ICONS}&display=block`;
 
 export const metadata = {
