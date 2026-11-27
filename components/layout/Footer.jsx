@@ -44,6 +44,7 @@ export function Footer() {
             <div className="space-y-2 md:space-y-4">
               <h5 className="text-xs font-bold uppercase tracking-widest text-tertiary">More</h5>
               <nav className="flex flex-col md:gap-2">
+                <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/production-readiness-score">Free Readiness Check</Link>
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/mentorship">Mentorship</Link>
                 <Link className="text-sm text-on-surface-variant hover:text-secondary transition-all py-3 md:py-0" href="/contact">Contact</Link>
               </nav>

@@ -1,3 +1,4 @@
+import { prsFaq } from "@/lib/prs";
 import { siteConfig } from "@/config/site";
 import { homeFaq, servicesFaq } from "@/lib/faq";
 import { testimonials } from "@/lib/testimonials";
@@ -64,6 +65,9 @@ export function GET() {
   for (const [slug, study] of Object.entries(caseStudies)) {
     lines.push(`### ${study.title}`, `URL: ${url(study.path)}`, caseStudyDetails[slug] || study.description, "");
   }
+
+  lines.push("## Free tool: Production-Readiness Score", `URL: ${url("/production-readiness-score")}`, "A free 15-question self-check for web apps, including apps built with Lovable, Bolt or Cursor. It scores security, reliability, performance, release process and ownership from 0 to 100 and lists the most important fixes in priority order. Answers stay in the browser.", "");
+  for (const f of prsFaq) lines.push(`Q: ${f.q}`, `A: ${f.a}`, "");
 
   lines.push("## Articles", "");
   for (const [slug, p] of Object.entries(blogPosts)) {

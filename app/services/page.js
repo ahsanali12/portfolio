@@ -9,7 +9,8 @@ const description =
 
 const services = [
   { name: "Fractional CTO", description: "Executive-level technical strategy, product roadmap, team building, process design, board reporting and technical due diligence without a full-time hire." },
-  { name: "Technical Founder Partner", description: "MVP planning and scoping, technical team hiring and product validation for non-technical founders." },
+  { name: "Technical Founder Partner", description: "Technical co-founder alternative for non-technical founders: SaaS MVP scoping, building, technical hiring and product validation." },
+  { name: "AI-Built App Rescue", description: "Makes apps built with Lovable, Bolt, Cursor or Replit production-ready: security, data protection, performance and deployment." },
   { name: "SaaS Architecture", description: "Multi-tenant, API-first, scalable SaaS platform architecture and legacy system modernization." },
   { name: "AI & Automation", description: "Generative AI, LLM and RAG integration, NLP, AI chatbots and workflow automation with n8n and Python." },
   { name: "Academic Mentorship", description: "Structured mentorship, workshops and curriculum advisory for computer science students and universities." },

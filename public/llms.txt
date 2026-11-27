@@ -13,17 +13,24 @@
 
 ## Services
 - [Fractional CTO](https://muhammadahsanali.vercel.app/services/fractional-cto): technology strategy, architecture, hiring, delivery ownership, due diligence.
-- [AI integration & RAG development](https://muhammadahsanali.vercel.app/services/ai-integration): RAG chatbots, LLM features, guardrails, n8n/Python automation.
+- [AI integration & RAG development](https://muhammadahsanali.vercel.app/services/ai-integration): AI agents, RAG chatbots, LLM features, guardrails, n8n/Python automation.
+- [AI-built app rescue](https://muhammadahsanali.vercel.app/services/ai-app-rescue): makes apps built with Lovable, Bolt, Cursor or Replit production-ready: security, data, performance, deployment.
 - [SaaS architecture & scaling](https://muhammadahsanali.vercel.app/services/saas-architecture): multi-tenant and multi-vendor platforms, performance, cost control.
-- [Legacy PHP & Laravel modernization](https://muhammadahsanali.vercel.app/services/legacy-modernization): staged upgrades without downtime, faster pages, lower server costs.
-- [Technical founder partner](https://muhammadahsanali.vercel.app/services/technical-founder-partner): MVP scoping, stack choice, first developer hires.
+- [Laravel consultant & legacy PHP modernization](https://muhammadahsanali.vercel.app/services/legacy-modernization): code audits, staged upgrades without downtime, faster pages, lower server costs.
+- [Technical co-founder alternative](https://muhammadahsanali.vercel.app/services/technical-founder-partner): technical partner for non-technical founders: SaaS MVP scoping, stack choice, building, first developer hires.
 - [Academic mentorship](https://muhammadahsanali.vercel.app/mentorship): visiting faculty, workshops, curriculum advisory.
 
 ## Frequently asked questions
 - [What does a fractional CTO do, cost and when do you need one?](https://muhammadahsanali.vercel.app/#faq)
 - [How engagements work, AI project scope, tech stack, NDAs](https://muhammadahsanali.vercel.app/services#faq)
 
+## Free tool
+- [Production-Readiness Score](https://muhammadahsanali.vercel.app/production-readiness-score): free 15-question check for web apps (including apps built with Lovable, Bolt or Cursor). Gives a 0-100 score across security, reliability, performance, release process and ownership, with prioritized fixes.
+
 ## Articles
+- [My Lovable app breaks with real users: what to fix first](https://muhammadahsanali.vercel.app/blog/lovable-app-breaks-with-real-users)
+- [How to build a SaaS MVP as a non-technical founder](https://muhammadahsanali.vercel.app/blog/build-saas-mvp-non-technical-founder)
+- [Technical co-founder vs fractional CTO: which do you need?](https://muhammadahsanali.vercel.app/blog/technical-cofounder-vs-fractional-cto)
 - [Fractional CTO cost in 2026: what startups actually pay](https://muhammadahsanali.vercel.app/blog/fractional-cto-cost)
 - [How I built a RAG support bot that handles 85% of tier-1 queries](https://muhammadahsanali.vercel.app/blog/rag-support-assistant-case-study)
 - [Upgrading legacy PHP/Laravel without downtime: a playbook](https://muhammadahsanali.vercel.app/blog/upgrade-legacy-php-without-downtime)

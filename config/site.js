@@ -45,5 +45,6 @@ export const siteConfig = {
     research: "/research",
     mentorship: "/mentorship",
     contact: "/contact",
+    prs: "/production-readiness-score",
   },
 };
