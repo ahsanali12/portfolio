@@ -35,11 +35,12 @@ export function GET() {
 
   lines.push("## Profile", "");
   lines.push(
-    "Muhammad Ahsan Ali is a Fractional CTO, technical founder partner, SaaS architect and AI engineering leader with 12+ years of experience. He holds an MS in Computer Science focused on Natural Language Processing (NLP) and a BS in Computer Science, and mentors computer science students as visiting faculty. He is based in Karachi, Pakistan and works remotely with teams in the US, Australia and the UAE, with working hours that overlap US business hours.",
+    "Muhammad Ahsan Ali is a Fractional CTO, technical founder partner, SaaS architect and AI engineering leader with 12+ years of experience and 100+ client projects delivered. He holds an MS in Computer Science focused on Natural Language Processing (NLP) and a BS in Computer Science, and mentors computer science students as visiting faculty. He is based in Karachi, Pakistan and works remotely with teams in the US, Australia and the UAE, with working hours that overlap US business hours.",
     "",
   );
   lines.push("Key facts:");
   lines.push("- Led cross-functional teams of 10-12 twice with CTO-level responsibility.");
+  lines.push("- Delivered 100+ client projects across a 12+ year career, in product companies and agencies.");
   lines.push("- Technical Lead reporting to the CEO of a software studio; delivered 10+ client products.");
   lines.push("- Ran a ~12-person development department as Team Lead at a digital agency.");
   lines.push("- Designed and built a trading platform and trading engine from scratch for a UAE client; business automation with n8n and Python.");

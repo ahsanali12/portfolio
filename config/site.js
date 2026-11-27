@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Muhammad Ahsan Ali | Fractional CTO & AI Engineering Leader",
   jobTitle: "Fractional CTO & AI Engineering Leader",
   description:
-    "Fractional CTO & AI engineering leader, 12+ years. I help startups scale SaaS, modernize legacy systems and ship production AI: LLM, RAG and automation.",
+    "Fractional CTO & AI engineering leader, 12+ years, 100+ client projects. I help startups scale SaaS, modernize legacy systems and ship production AI: LLM, RAG and automation.",
   keywords: [
     "Fractional CTO",
     "Fractional CTO for startups",

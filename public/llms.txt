@@ -1,12 +1,13 @@
 # Muhammad Ahsan Ali
 
-> Fractional CTO, technical founder partner, SaaS architect and AI engineering leader with 12+ years of experience. MS Computer Science (NLP). Helps startups and growing companies scale software, engineering teams and AI systems. Based in Karachi, Pakistan; works remotely with teams in the US, Australia and the UAE. Visiting faculty and mentor for computer science students.
+> Fractional CTO, technical founder partner, SaaS architect and AI engineering leader with 12+ years of experience and 100+ client projects delivered. MS Computer Science (NLP). Helps startups and growing companies scale software, engineering teams and AI systems. Based in Karachi, Pakistan; works remotely with teams in the US, Australia and the UAE. Visiting faculty and mentor for computer science students.
 
 ## Key facts
 - Led cross-functional teams of 10-12 twice with CTO-level responsibility.
 - Modernized a legacy e-commerce + CRM platform serving ~1M users for an Australian retailer: ~60% faster load times, ~$6k/month lower server costs.
 - Designed and deployed a RAG-based AI customer support assistant for a FinTech startup: 85% of tier-1 queries handled, 92% customer satisfaction.
 - Leads development of a US multi-vendor platform with thousands of users, including its AI workflow system.
+- Delivered 100+ client projects across a 12+ year career (product companies and agencies).
 - Delivered 10+ client products as Technical Lead reporting to the CEO of a software studio.
 - Designed and built a trading platform and trading engine from scratch for a UAE client; business automation with n8n and Python.
 
